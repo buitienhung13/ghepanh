@@ -6,17 +6,17 @@
   <title>Ghép Ảnh Game - 52hzmisfit</title>
   <style>
     body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #0a0a0a, #1b1208, #2a1c0b);
-    color: #2377B7;
-    margin: 0;
-    padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #0a0a0a, #1b1208, #2a1c0b);
+      color: #2377B7;
+      margin: 0;
+      padding: 0;
     }
 
     header {
       text-align: center;
       padding: 20px;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0, 0, 0, 0.4);
       box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
     }
 
@@ -55,12 +55,12 @@
       overflow: hidden;
       scroll-snap-align: start;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+      box-shadow: none; /* ❌ bỏ đổ bóng vàng */
     }
 
     .card img {
@@ -80,16 +80,9 @@
       font-weight: 600;
     }
 
-    .overlay.top {
-      top: 0;
-    }
+    .overlay.top { top: 0; }
+    .overlay.bottom { bottom: 0; border-radius: 0 8px 0 0; }
 
-    .overlay.bottom {
-      bottom: 0;
-      border-radius: 0 8px 0 0;
-    }
-
-    /* Responsive sizes */
     .vertical img {
       width: 220px;
       height: 390px;
@@ -102,345 +95,107 @@
       object-fit: cover;
     }
 
-    ::-webkit-scrollbar {
-      display: none;
-    }
+    ::-webkit-scrollbar { display: none; }
   </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+    // 🐧 Rút gọn phần sản phẩm: tạo tự động bằng JS
+    const sections = [
+      {
+        title: "Xứ sở hoàng hôn",
+        class: "vertical",
+        items:  [
+          ["xhh01.JPEG", 20000], ["xhh02.JPEG", 20000], ["xhh03.JPEG", 18000],
+          ["xhh04.PNG", 19000], ["xhh05.JPEG", 20000], ["xhh06.JPEG", 25000],
+          ["xhh07.JPEG", 22000], ["xhh08.JPG", 20000], ["xhh09.JPG", 20000],
+          ["xhh010.JPG", 20000], ["xhh11.jpg", 20000], ["xhh12.jpg", 20000],
+          ["xhh13.jpg", 20000], ["xhh14.jpg", 20000], ["xhh15.jpg", 20000],
+          ["xhh16.jpg", 20000], ["xhh17.jpg", 20000], ["xhh18.jpg", 20000],
+          ["xhh19.jpg", 25000], ["xhh20.jpg", 20000],    ["xhh21.jpg", 20000],
+    ["xhh22.jpg", 20000],
+    ["xhh23.jpg", 20000],
+    ["xhh24.jpg", 20000],
+    ["xhh25.jpg", 20000],
+    ["xhh26.jpg", 20000],
+    ["xhh27.jpg", 20000],
+    ["xhh28.jpg", 20000],
+    ["xhh29.jpg", 20000],
+    ["xhh30.jpg", 20000],
+    ["xhh32.jpg", 20000],
+    ["xhh33.jpg", 20000],
+    ["xhh34.jpg", 20000],
+    ["xhh35.jpg", 20000]
+        ]
+      },
+      {
+        title: "Xứ sở bình minh",
+        class: "horizontal",
+        items: [
+          ["xbm01.JPEG", 20000], ["xbm02.JPEG", 19000], ["xbm03.JPEG", 20000],
+          ["xbm04.JPEG", 18000], ["xbm12.JPEG", 20000], ["xbm14.JPEG", 20000],
+          ["xbm07.JPEG", 14000], ["xbm08.JPEG", 16000], ["xbm10.JPEG", 18000],
+          ["xbm15.JPEG", 14000], ["xbm17.JPEG", 20000], ["xbm18.JPEG", 20000],
+          ["xbm19.JPEG", 22000], ["xbm20.JPEG", 18000], ["xbm21.JPEG", 22000],
+          ["xbm24.jpg", 16000], ["xbm25.jpg", 12000], ["xbm26.jpg", 20000]
+        ]
+      },
+      {
+        title: "Xứ sở pha lê",
+        class: "horizontal",
+        items: [
+          ["xbm05.JPEG", 25000], ["xbm06.PNG", 20000], ["xbm09.JPG", 25000],
+          ["xbm11.JPEG", 20000], ["xbm13.JPEG", 20000], ["xbm16.JPEG", 25000],
+          ["xbm22.JPEG", 35000], ["xbm23.jpg", 20000]
+        ]
+      },
+      {
+        title: "Cứ nhắn zalo: 0347510287 mình nha",
+
+      }
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const body = document.body;
+      sections.forEach(sec => {
+        const title = document.createElement("h2");
+        title.textContent = sec.title;
+        body.appendChild(title);
+
+        const div = document.createElement("div");
+        div.className = `gallery ${sec.class}`;
+        body.appendChild(div);
+
+        sec.items.forEach(([img, price], i) => {
+          const card = document.createElement("div");
+          card.className = "card";
+          card.innerHTML = `
+            <img src="images/${img}" alt="${sec.title} ${i+1}">
+            <div class="overlay top">${img.split('.')[0].toUpperCase()}</div>
+            <div class="overlay bottom">Giá: ${price.toLocaleString()}đ</div>`;
+          div.appendChild(card);
+        });
+      });
+    });
+  </script>
 </head>
+
 <body>
-<header>
-    <a href="https://www.facebook.com/share/19eGihbGfm/?mibextid=wwXIfr" target="new"><i class="fab fa-facebook"></i> Facebook</a>
-    <a href="https://www.tiktok.com/@52hzmisfit?_t=ZS-90KVyBJ9xH0&_r=1" target="new"><i class="fab fa-tiktok"></i> TikTok</a>
+  <header>
+    <a href="https://www.facebook.com/share/19eGihbGfm/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+    <a href="https://www.tiktok.com/@52hzmisfit?_t=ZS-90KVyBJ9xH0&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
     <a href="#"><i class="fab fa-zalo"></i> Zalo: 034 751 0287</a>
-</header>
+  </header>
+
+  <h1 style="color:#FFC900; text-align:center;">GHÉP ẢNH GAME</h1>
+  <p style="margin-left:20px; line-height:1.6;">
+    - Chào bạn, mình nhận ghép tất cả các ảnh bên dưới và có nhận ghép theo yêu cầu.<br>
+    - Ảnh sẽ được trả trong 24h, thường thì sẽ sớm hơn.<br>
+    - Đặc biệt ảnh trả siêu nét nha, không nét không lấy tiền.<br>
+    - Cứ ib Zalo <b>0347510287</b> rep cho nhanh nha.<br><br>
+    <span style="color:#CE1414;">Lưu ý: chuyển khoản trước làm sau nha. Nếu des xấu không ưng thì hoàn lại tiền.</span>
+  </p>
+
+  <h1 style="color:#fff; text-align:center;">LIÊN QUÂN MOBILE</h1>
 	
-	<h1 style="color: #FFC900; text-align: center;">GHÉP ẢNH GAME</h1>
-<br>
-&nbsp; &nbsp;- Chào bạn, mình nhận ghép tất cả các ảnh bên duới và có nhận ghép theo yêu cầu.<br>
-	&nbsp;&nbsp;&nbsp;- Ảnh sẽ được trả trong 24h thường thì sẽ sớm hơn.<br>
-	&nbsp; &nbsp;- Đặc biệt ảnh trả siêu nét nha,không nét không lấy tiền.<br>
-	&nbsp;&nbsp;&nbsp;- cứ ib zalo 0347510287 rep cho nhanh nha.<br>
-	<br> 
-	&nbsp; &nbsp;<span style="color: #CE1414">Lưu ý: chuyển khoản trước làm sau nha.Nếu des xấu không ưng thì hoàn lại tiền. </span>
-  <h1 style="color: #FFFFFF">LIÊN QUÂN MOBILE</h1>
-  <h2>xứ sở hoàng hôn</h2>
-<div class="gallery vertical">
-  <div class="card">
-      <img src="images/xhh01.JPEG" alt="XHH01">
-      <div class="overlay top">XHH01</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-  </div>
-    <div class="card">
-      <img src="images/xhh02.JPEG" alt="XHH02">
-      <div class="overlay top">XHH02</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-    <div class="card">
-      <img src="images/xhh03.JPEG" alt="XHH03">
-      <div class="overlay top">XHH03</div>
-      <div class="overlay bottom">Giá: 18.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh04.PNG" alt="XHH04">
-      <div class="overlay top">XHH04</div>
-      <div class="overlay bottom">Giá: 19.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh05.JPEG" alt="XHH05">
-      <div class="overlay top">XHH05</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh06.JPEG" alt="XHH06">
-      <div class="overlay top">XHH06</div>
-      <div class="overlay bottom">Giá: 25.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh07.JPEG" alt="XHH07">
-      <div class="overlay top">XHH07</div>
-      <div class="overlay bottom">Giá: 22.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh08.JPG" alt="XHH08">
-      <div class="overlay top">XHH08</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh09.JPG" alt="XHH09">
-      <div class="overlay top">XHH09</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh010.JPG" alt="XHH10">
-      <div class="overlay top">XHH10</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh11.jpg" alt="XHH10">
-      <div class="overlay top">XHH11</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh12.jpg" alt="XHH10">
-      <div class="overlay top">XHH12</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh13.jpg" alt="XHH10">
-      <div class="overlay top">XHH13</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh14.jpg" alt="XHH10">
-      <div class="overlay top">XHH14</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh15.jpg" alt="XHH10">
-      <div class="overlay top">XHH15</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh16.jpg" alt="XHH10">
-      <div class="overlay top">XHH16</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh17.jpg" alt="XHH10">
-      <div class="overlay top">XHH17</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh18.jpg" alt="XHH10">
-      <div class="overlay top">XHH18</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh19.jpg" alt="XHH10">
-      <div class="overlay top">XHH19</div>
-      <div class="overlay bottom">Giá: 25.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh20.jpg" alt="XHH10">
-      <div class="overlay top">XHH20</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh21.jpg" alt="XHH10">
-      <div class="overlay top">XHH21</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh22.jpg" alt="XHH10">
-      <div class="overlay top">XHH22</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh23.jpg" alt="XHH10">
-      <div class="overlay top">XHH23</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh24.jpg" alt="XHH10">
-      <div class="overlay top">XHH24</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh25.jpg" alt="XHH10">
-      <div class="overlay top">XHH25</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh26.jpg" alt="XHH10">
-      <div class="overlay top">XHH26</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh27.jpg" alt="XHH10">
-      <div class="overlay top">XHH27</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh28.jpg" alt="XHH10">
-      <div class="overlay top">XHH28</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh29.jpg" alt="XHH10">
-      <div class="overlay top">XHH29</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh30.jpg" alt="XHH10">
-      <div class="overlay top">XHH30</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh32.jpg" alt="XHH10">
-      <div class="overlay top">XHH31</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh33.jpg" alt="XHH10">
-      <div class="overlay top">XHH32</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh34.jpg" alt="XHH10">
-      <div class="overlay top">XHH33</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh35.jpg" alt="XHH10">
-      <div class="overlay top">XHH34</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xhh11.jpg" alt="XHH10">
-      <div class="overlay top">XHH11</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	
-</div>
-
-  <h2>Xứ sở bình minh</h2>
-<div class="gallery horizontal">
-    <div class="card">
-      <img src="images/xbm01.JPEG" alt="XBM01">
-      <div class="overlay top">XBM01</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-  </div>
-    <div class="card">
-      <img src="images/xbm02.JPEG" alt="XBM02">
-      <div class="overlay top">XBM02</div>
-      <div class="overlay bottom">Giá: 19.000đ</div>
-    </div>
-    <div class="card">
-      <img src="images/xbm03.JPEG" alt="XBM03">
-      <div class="overlay top">XBM03</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm04.JPEG" alt="XBM04">
-      <div class="overlay top">XBM04</div>
-      <div class="overlay bottom">Giá: 18.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm12.JPEG" alt="XBM05">
-      <div class="overlay top">XBM05</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm14.JPEG" alt="XBM06">
-      <div class="overlay top">XBM06</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm07.JPEG" alt="XBM07">
-      <div class="overlay top">XBM07</div>
-      <div class="overlay bottom">Giá: 14.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm08.JPEG" alt="XBM08">
-      <div class="overlay top">XBM08</div>
-      <div class="overlay bottom">Giá: 16.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm10.JPEG" alt="XBM09">
-      <div class="overlay top">XBM09</div>
-      <div class="overlay bottom">Giá: 18.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm15.JPEG" alt="XBM09">
-      <div class="overlay top">XBM10</div>
-      <div class="overlay bottom">Giá: 14.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm17.JPEG" alt="XBM09">
-      <div class="overlay top">XBM11</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm18.JPEG" alt="XBM09">
-      <div class="overlay top">XBM12</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm19.JPEG" alt="XBM09">
-      <div class="overlay top">XBM13</div>
-      <div class="overlay bottom">Giá: 22.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm20.JPEG" alt="XBM09">
-      <div class="overlay top">XBM14</div>
-      <div class="overlay bottom">Giá: 18.000đ</div>
-    </div><div class="card">
-      <img src="images/xbm21.JPEG" alt="XBM09">
-      <div class="overlay top">XBM15</div>
-      <div class="overlay bottom">Giá: 22.000đ</div>
-    </div>
-	<div class="card">
-      <img src="images/xbm24.jpg" alt="XPL01">
-      <div class="overlay top">XBM16</div>
-      <div class="overlay bottom">Giá: 16.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm25.jpg" alt="XPL01">
-      <div class="overlay top">XBM17</div>
-      <div class="overlay bottom">Giá: 12.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm26.jpg" alt="XPL01">
-      <div class="overlay top">XBM18</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-  </div>
-</div>
-
-  <h2>Xứ sở pha lê</h2>
-<div class="gallery horizontal">
-    <div class="card">
-      <img src="images/xbm05.JPEG" alt="XPL01">
-      <div class="overlay top">XPL01</div>
-      <div class="overlay bottom">Giá: 25.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm06.PNG" alt="XPL02">
-      <div class="overlay top">XPL02</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm09.JPG" alt="XPL03">
-      <div class="overlay top">XPL03</div>
-      <div class="overlay bottom">Giá: 25.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm11.JPEG" alt="XPL01">
-      <div class="overlay top">XPL04</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm13.JPEG" alt="XPL01">
-      <div class="overlay top">XPL05</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm16.JPEG" alt="XPL01">
-      <div class="overlay top">XPL06</div>
-      <div class="overlay bottom">Giá: 25.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm22.JPEG" alt="XPL01">
-      <div class="overlay top">XPL07</div>
-      <div class="overlay bottom">Giá: 35.000đ</div>
-  </div>
-	<div class="card">
-      <img src="images/xbm23.jpg" alt="XPL01">
-      <div class="overlay top">XPL08</div>
-      <div class="overlay bottom">Giá: 20.000đ</div>
-  </div>
-
-</div>
-	<h2>ưng ảnh nào ib zalo: 0347510287 nha :3&nbsp; &nbsp; &nbsp;</h2>
 </body>
 </html>
