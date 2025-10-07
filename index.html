@@ -212,37 +212,37 @@ const discountPercent = 20;
   <h1 style="color:#fff; text-align:center;">LIÊN QUÂN MOBILE</h1>
 <script>
   // === 🐧 Cấu hình thời gian kết thúc sale ===
-const saleEndTime = new Date("2025-10-10T18:30:00+07:00").getTime();
+const saleEndTime = new Date("2025-10-07T21:50:00+07:00").getTime();
   let saleActive = true; // Ban đầu bật giảm giá
 
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const distance = saleEndTime - now;
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = saleEndTime - now;
 
-    if (distance < 0) {
-  clearInterval(x);
-  document.getElementById("countdown").innerHTML = "Hết thời gian giảm giá!";
-  
-  // Ẩn thanh Flash Sale sau 3 giây
-  setTimeout(() => {
-    const flashSaleBar = document.getElementById("flash-sale-bar");
-    if (flashSaleBar) {
-      flashSaleBar.style.display = "none";
-    }
-  }, 3000);
-}
-
-    if (!saleActive) return;
-
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / (1000 * 60)) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
-
-    document.getElementById("countdown").innerHTML =
-      `${hours.toString().padStart(2, "0")}:${minutes
-        .toString()
-        .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "Hết thời gian giảm giá!";
+    
+    // Ẩn thanh Flash Sale sau 3 giây
+    setTimeout(() => {
+      const flashSaleBar = document.getElementById("flash-sale-bar");
+      if (flashSaleBar) {
+        flashSaleBar.style.display = "none";
+      }
+    }, 3000);
+    saleActive = false;
+    return;
   }
+
+  const totalHours = Math.floor(distance / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    `${totalHours.toString().padStart(2, "0")}:${minutes
+      .toString()
+      .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+}
 
   setInterval(updateCountdown, 1000);
   updateCountdown();
