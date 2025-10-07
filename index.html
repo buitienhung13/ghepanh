@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ghép Ảnh Game - 52hzmisfit</title>
   <style>
-    body {
+    body 
+	  
+	  {
       font-family: 'Poppins', sans-serif;
       background: linear-gradient(180deg, #0a0a0a, #1b1208, #2a1c0b);
       color: #2377B7;
@@ -99,84 +101,93 @@
   </style>
 
   <script>
-    // 🐧 Rút gọn phần sản phẩm: tạo tự động bằng JS
-    const sections = [
-      {
-        title: "Xứ sở hoàng hôn",
-        class: "vertical",
-        items:  [
-          ["xhh01.JPEG", 20000], ["xhh02.JPEG", 20000], ["xhh03.JPEG", 18000],
-          ["xhh04.PNG", 19000], ["xhh05.JPEG", 20000], ["xhh06.JPEG", 25000],
-          ["xhh07.JPEG", 22000], ["xhh08.JPG", 20000], ["xhh09.JPG", 20000],
-          ["xhh010.JPG", 20000], ["xhh11.jpg", 20000], ["xhh12.jpg", 20000],
-          ["xhh13.jpg", 20000], ["xhh14.jpg", 20000], ["xhh15.jpg", 20000],
-          ["xhh16.jpg", 20000], ["xhh17.jpg", 20000], ["xhh18.jpg", 20000],
-          ["xhh19.jpg", 25000], ["xhh20.jpg", 20000],    ["xhh21.jpg", 20000],
-    ["xhh22.jpg", 20000],
-    ["xhh23.jpg", 20000],
-    ["xhh24.jpg", 20000],
-    ["xhh25.jpg", 20000],
-    ["xhh26.jpg", 20000],
-    ["xhh27.jpg", 20000],
-    ["xhh28.jpg", 20000],
-    ["xhh29.jpg", 20000],
-    ["xhh30.jpg", 20000],
-    ["xhh32.jpg", 20000],
-    ["xhh33.jpg", 20000],
-    ["xhh34.jpg", 20000],
-    ["xhh35.jpg", 20000]
-        ]
-      },
-      {
-        title: "Xứ sở bình minh",
-        class: "horizontal",
-        items: [
-          ["xbm01.JPEG", 20000], ["xbm02.JPEG", 19000], ["xbm03.JPEG", 20000],
-          ["xbm04.JPEG", 18000], ["xbm12.JPEG", 20000], ["xbm14.JPEG", 20000],
-          ["xbm07.JPEG", 14000], ["xbm08.JPEG", 16000], ["xbm10.JPEG", 18000],
-          ["xbm15.JPEG", 14000], ["xbm17.JPEG", 20000], ["xbm18.JPEG", 20000],
-          ["xbm19.JPEG", 22000], ["xbm20.JPEG", 18000], ["xbm21.JPEG", 22000],
-          ["xbm24.jpg", 16000], ["xbm25.jpg", 12000], ["xbm26.jpg", 20000]
-        ]
-      },
-      {
-        title: "Xứ sở pha lê",
-        class: "horizontal",
-        items: [
-          ["xbm05.JPEG", 25000], ["xbm06.PNG", 20000], ["xbm09.JPG", 25000],
-          ["xbm11.JPEG", 20000], ["xbm13.JPEG", 20000], ["xbm16.JPEG", 25000],
-          ["xbm22.JPEG", 35000], ["xbm23.jpg", 20000]
-        ]
-      },
-      {
-        title: "Cứ nhắn zalo: 0347510287 mình nha",
+// 🐧 Cấu hình giảm giá
+const enableSale = localStorage.getItem("saleOff") === "true" ? false : true;
+const discountPercent = 20;
+  const sections = [
+    {
+      title: "Xứ sở hoàng hôn",
+      class: "vertical",
+      items: [
+        ["xhh01.JPEG", 20000], ["xhh02.JPEG", 20000], ["xhh03.JPEG", 18000],
+        ["xhh04.PNG", 19000], ["xhh05.JPEG", 20000], ["xhh06.JPEG", 25000],
+        ["xhh07.JPEG", 22000], ["xhh08.JPG", 20000], ["xhh09.JPG", 20000],
+        ["xhh010.JPG", 20000], ["xhh11.jpg", 20000], ["xhh12.jpg", 20000],
+        ["xhh13.jpg", 20000], ["xhh14.jpg", 20000], ["xhh15.jpg", 20000],
+        ["xhh16.jpg", 20000], ["xhh17.jpg", 20000], ["xhh18.jpg", 20000],
+        ["xhh19.jpg", 25000], ["xhh20.jpg", 20000], ["xhh21.jpg", 20000],
+        ["xhh22.jpg", 20000], ["xhh23.jpg", 20000], ["xhh24.jpg", 20000],
+        ["xhh25.jpg", 20000], ["xhh26.jpg", 20000], ["xhh27.jpg", 20000],
+        ["xhh28.jpg", 20000], ["xhh29.jpg", 20000], ["xhh30.jpg", 20000],
+        ["xhh32.jpg", 20000], ["xhh33.jpg", 20000], ["xhh34.jpg", 20000],
+        ["xhh35.jpg", 20000]
+      ]
+    },
+    {
+      title: "Xứ sở bình minh",
+      class: "horizontal",
+      items: [
+        ["xbm01.JPEG", 20000], ["xbm02.JPEG", 19000], ["xbm03.JPEG", 20000],
+        ["xbm04.JPEG", 18000], ["xbm12.JPEG", 20000], ["xbm14.JPEG", 20000],
+        ["xbm07.JPEG", 14000], ["xbm08.JPEG", 16000], ["xbm10.JPEG", 18000],
+        ["xbm15.JPEG", 14000], ["xbm17.JPEG", 20000], ["xbm18.JPEG", 20000],
+        ["xbm19.JPEG", 22000], ["xbm20.JPEG", 18000], ["xbm21.JPEG", 22000],
+        ["xbm24.jpg", 16000], ["xbm25.jpg", 12000], ["xbm26.jpg", 20000]
+      ]
+    },
+    {
+      title: "Xứ sở pha lê",
+      class: "horizontal",
+      items: [
+        ["xbm05.JPEG", 25000], ["xbm06.PNG", 20000], ["xbm09.JPG", 25000],
+        ["xbm11.JPEG", 20000], ["xbm13.JPEG", 20000], ["xbm16.JPEG", 25000],
+        ["xbm22.JPEG", 35000], ["xbm23.jpg", 20000]
+      ]
+    },
+    {
+      title: "Cứ nhắn zalo: 0347510287 mình nha",
+    }
+  ];
 
-      }
-    ];
+  document.addEventListener("DOMContentLoaded", () => {
+    const body = document.body;
+    sections.forEach(sec => {
+      const title = document.createElement("h2");
+      title.textContent = sec.title;
+      body.appendChild(title);
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const body = document.body;
-      sections.forEach(sec => {
-        const title = document.createElement("h2");
-        title.textContent = sec.title;
-        body.appendChild(title);
+      if (!sec.items) return;
 
-        const div = document.createElement("div");
-        div.className = `gallery ${sec.class}`;
-        body.appendChild(div);
+      const div = document.createElement("div");
+      div.className = `gallery ${sec.class}`;
+      body.appendChild(div);
 
-        sec.items.forEach(([img, price], i) => {
-          const card = document.createElement("div");
-          card.className = "card";
-          card.innerHTML = `
-            <img src="images/${img}" alt="${sec.title} ${i+1}">
-            <div class="overlay top">${img.split('.')[0].toUpperCase()}</div>
-            <div class="overlay bottom">Giá: ${price.toLocaleString()}đ</div>`;
-          div.appendChild(card);
-        });
+      sec.items.forEach(([img, price], i) => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        let finalPrice = price;
+        if (enableSale) {
+          finalPrice = Math.ceil(price * (1 - discountPercent / 100) / 1000) * 1000;
+        }
+
+        const priceDisplay = enableSale
+          ? `<div class="overlay bottom">
+              <s style="color:#a00;">${price.toLocaleString()}đ</s>
+              <span style="color:#000; font-weight:700;"> ${finalPrice.toLocaleString()}đ</span>
+            </div>`
+          : `<div class="overlay bottom">Giá: ${price.toLocaleString()}đ</div>`;
+
+        card.innerHTML = `
+          <img src="images/${img}" alt="${sec.title} ${i+1}">
+          <div class="overlay top">${img.split('.')[0].toUpperCase()}</div>
+          ${priceDisplay}
+        `;
+        div.appendChild(card);
       });
     });
-  </script>
+  });
+</script>
 </head>
 
 <body>
@@ -187,6 +198,9 @@
   </header>
 
   <h1 style="color:#FFC900; text-align:center;">GHÉP ẢNH GAME</h1>
+  <div id="sale-banner" style="background:#ff5252;color:#fff;text-align:center;padding:10px 0;font-size:18px;font-weight:bold;">
+    ⚡ Giảm giá kết thúc sau: <span id="countdown"></span> ⚡
+  </div>
   <p style="margin-left:20px; line-height:1.6;">
     - Chào bạn, mình nhận ghép tất cả các ảnh bên dưới và có nhận ghép theo yêu cầu.<br>
     - Ảnh sẽ được trả trong 24h, thường thì sẽ sớm hơn.<br>
@@ -196,6 +210,43 @@
   </p>
 
   <h1 style="color:#fff; text-align:center;">LIÊN QUÂN MOBILE</h1>
-	
+<script>
+  // === 🐧 Cấu hình thời gian kết thúc sale ===
+const saleEndTime = new Date("2025-10-10T18:30:00+07:00").getTime();
+  let saleActive = true; // Ban đầu bật giảm giá
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = saleEndTime - now;
+
+    if (distance < 0) {
+  clearInterval(x);
+  document.getElementById("countdown").innerHTML = "Hết thời gian giảm giá!";
+  
+  // Ẩn thanh Flash Sale sau 3 giây
+  setTimeout(() => {
+    const flashSaleBar = document.getElementById("flash-sale-bar");
+    if (flashSaleBar) {
+      flashSaleBar.style.display = "none";
+    }
+  }, 3000);
+}
+
+    if (!saleActive) return;
+
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((distance / (1000 * 60)) % 60);
+    const seconds = Math.floor((distance / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+      `${hours.toString().padStart(2, "0")}:${minutes
+        .toString()
+        .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
 </body>
 </html>
