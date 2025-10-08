@@ -101,6 +101,72 @@
     }
 
     ::-webkit-scrollbar { display: none; }
+/* Nút Zalo nổi */
+.zalo-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 9999;
+  animation: zaloFloat 3s ease-in-out infinite;
+  overflow: visible;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zalo-button img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background: transparent;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.zalo-button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(0, 104, 255, 0.45);
+}
+
+/* Hiệu ứng lan tỏa */
+.zalo-ping {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(0, 104, 255, 0.18);
+  animation: zaloPing 1.8s ease-out infinite;
+  z-index: -1;
+}
+
+@keyframes zaloPing {
+  0% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  75% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+/* Hiệu ứng nổi nhẹ */
+@keyframes zaloFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
   </style>
   
   <script>
@@ -212,7 +278,7 @@
   <header>
     <a href="https://www.facebook.com/share/19eGihbGfm/?mibextid=wwXIfr" target="_blank">Facebook</a>
     <a href="https://www.tiktok.com/@52hzmisfit?_t=ZS-90KVyBJ9xH0&_r=1" target="_blank">TikTok</a>
-    <a href="#">Zalo: 034 751 0287</a>
+    <a href="https://zalo.me/0347510287" target="new">Zalo:0347510287</a>
   </header>
 
   <h1 style="color:#FFC900; text-align:center;">GHÉP ẢNH GAME</h1>
@@ -267,5 +333,15 @@
     const timer = setInterval(updateCountdown, 1000);
     updateCountdown();
   </script>
+<!-- Nút Zalo nổi -->
+<a href="https://zalo.me/0347510287" 
+   target="new" 
+   rel="noopener noreferrer" 
+   class="zalo-button" 
+   aria-label="Liên hệ Zalo 0347510287">
+  <img src="images/zalo.png" alt="Zalo Chat">
+  <span class="zalo-ping"></span>
+</a>
+
 </body>
 </html>
