@@ -170,13 +170,3 @@ h2 {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
 }
-/* Hiệu ứng phóng to khi ảnh ở giữa khung nhìn */
-.gallery .card {
-  transform: scale(0.9);
-  transition: transform 0.3s ease;
-}
-
-.gallery .card.active {
-  transform: scale(1.1);
-  z-index: 2;
-}
