@@ -170,3 +170,29 @@ function startCountdown() {
   updateCountdown();
 }
 // JavaScript Document
+// 💫 Hiệu ứng phóng to ảnh khi lướt gallery
+// =========================
+function activateCenterZoom() {
+  const galleries = document.querySelectorAll('.gallery');
+
+  galleries.forEach(gallery => {
+    gallery.addEventListener('scroll', () => {
+      const cards = gallery.querySelectorAll('.card');
+      const galleryRect = gallery.getBoundingClientRect();
+
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const cardCenter = rect.left + rect.width / 2;
+        const galleryCenter = galleryRect.left + galleryRect.width / 2;
+        const distance = Math.abs(galleryCenter - cardCenter);
+        const scale = Math.max(0.9, 1.1 - distance / galleryRect.width);
+        card.style.transform = `scale(${scale})`;
+      });
+    });
+  });
+}
+
+// Gọi hiệu ứng sau khi gallery tạo xong
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(activateCenterZoom, 500);
+});
