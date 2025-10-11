@@ -80,8 +80,19 @@ const sections = [
   { title: "Cứ nhắn zalo: 0347510287 mình nha" }
 ];
 
+
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
+
+  // Lấy data tim từ localStorage
+  const hearts = JSON.parse(localStorage.getItem("hearts") || "{}");
+
+  // Tạo mảng [imageId, heartCount], sắp xếp giảm dần, lấy top 10
+  const topHearts = Object.entries(hearts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(item => item[0]); // chỉ lấy imageId
+
   sections.forEach(sec => {
     const title = document.createElement("h2");
     title.textContent = sec.title;
@@ -109,17 +120,38 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>`
         : `<div class="overlay bottom">Giá: ${price.toLocaleString()}đ</div>`;
 
+      const imageId = img.split('.')[0].toUpperCase(); // mã ảnh không có đuôi
+      const heartCount = hearts[imageId] || 0;
+
+      // Kiểm tra ảnh có nằm trong top 10 không
+      const isTop = topHearts.includes(imageId);
+
+      // Nếu ảnh nằm trong top 10 thì thay đổi nền góc trên bên trái bằng ảnh bạn tạo
+      const topBgStyle = isTop
+        ? `style="background-image: url('images/top-heart-bg.png'); background-size: cover; background-position: center; color: #fff; font-weight: bold;"`
+        : `style="background: yellow;"`; // hoặc nền mặc định màu vàng
+
       card.innerHTML = `
-        <img src="images/${img}" alt="${sec.title} ${i+1}">
-        <div class="overlay top">${img.split('.')[0].toUpperCase()}</div>
+        <img src="images/${img}" alt="${imageId}">
+        <div class="overlay top" ${topBgStyle}>${imageId}</div>
         ${priceDisplay}
+        <button class="heart-btn" data-id="${imageId}">
+          ❤️ <span class="heart-count">${heartCount}</span>
+        </button>
       `;
+
+      // Nếu là top thì thêm class 'top-heart' để bạn dễ tùy chỉnh CSS (nếu muốn)
+      if (isTop) {
+        card.querySelector(".overlay.top").classList.add("top-heart");
+      }
+
       div.appendChild(card);
     });
   });
 
   startCountdown();
 });
+
 
 // ✅ Cập nhật giá khi hết giảm giá
 function updatePrices() {
@@ -169,7 +201,7 @@ function startCountdown() {
   const timer = setInterval(updateCountdown, 1000);
   updateCountdown();
 }
-// JavaScript Document
+
 // =====================
 // 🔎 TÌM ẢNH THEO MÃ FILE
 // =====================
@@ -178,34 +210,52 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("searchBtn");
   const result = document.getElementById("result");
 
-function showImage() {
-  const code = input.value.trim().toLowerCase(); // Đưa mã nhập về chữ thường
-  if (!code) {
-    result.innerHTML = `<p class="notice">Vui lòng nhập mã ảnh.</p>`;
-    return;
+  function showImage() {
+    const code = input.value.trim().toLowerCase();
+    if (!code) {
+      result.innerHTML = `<p class="notice">Vui lòng nhập mã ảnh.</p>`;
+      return;
+    }
+
+    const allImages = sections.flatMap(s => s.items || []).map(([name]) => name);
+    const matchedFile = allImages.find(name => name.split('.')[0].toLowerCase() === code);
+
+    if (matchedFile) {
+      const imgPath = `images/${matchedFile}`;
+      result.innerHTML = `
+        <div class="preview">
+          <img src="${imgPath}" alt="${code}">
+          <p class="caption">Mã ảnh: <b>${matchedFile.split('.')[0].toUpperCase()}</b></p>
+        </div>`;
+    } else {
+      result.innerHTML = `<p class="notice notfound">❌ Không tìm thấy ảnh "${code.toUpperCase()}"</p>`;
+    }
   }
-
-  // Lấy toàn bộ danh sách file ảnh từ sections
-  const allImages = sections.flatMap(s => s.items || []).map(([name]) => name);
-
-  // Tìm file có tên (bỏ đuôi) trùng với mã người dùng nhập
-  const matchedFile = allImages.find(name => name.split('.')[0].toLowerCase() === code);
-
-  if (matchedFile) {
-    const imgPath = `images/${matchedFile}`;
-    result.innerHTML = `
-      <div class="preview">
-        <img src="${imgPath}" alt="${code}">
-        <p class="caption">Mã ảnh: <b>${matchedFile.split('.')[0].toUpperCase()}</b></p>
-      </div>`;
-  } else {
-    result.innerHTML = `<p class="notice notfound">❌ Không tìm thấy ảnh "${code.toUpperCase()}"</p>`;
-  }
-}
-
 
   btn?.addEventListener("click", showImage);
   input?.addEventListener("keypress", e => {
     if (e.key === "Enter") showImage();
   });
+});
+
+// ❤️ XỬ LÝ THẢ TIM
+document.addEventListener("click", (e) => {
+  if (e.target.closest(".heart-btn")) {
+    const btn = e.target.closest(".heart-btn");
+    const imgId = btn.dataset.id;
+
+    let hearts = JSON.parse(localStorage.getItem("hearts") || "{}");
+
+    if (hearts[imgId]) {
+      hearts[imgId]--;
+      if (hearts[imgId] < 0) hearts[imgId] = 0;
+      btn.classList.remove("liked");
+    } else {
+      hearts[imgId] = 1;
+      btn.classList.add("liked");
+    }
+
+    localStorage.setItem("hearts", JSON.stringify(hearts));
+    btn.querySelector(".heart-count").textContent = hearts[imgId];
+  }
 });
