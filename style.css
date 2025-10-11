@@ -253,3 +253,51 @@ h2 {
   font-size: 16px;
   margin-top: 8px;
 }
+.heart-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: 0.2s ease;
+}
+
+.heart-btn.liked {
+  color: red;
+  font-weight: bold;
+}
+
+.heart-btn:hover {
+  transform: scale(1.05);
+}
+/* Hiệu ứng lửa cháy */
+@keyframes fireGlow {
+  0% { box-shadow: 0 0 4px #ff9800, 0 0 12px #ff5722; }
+  50% { box-shadow: 0 0 10px #ff5722, 0 0 20px #ff9800; }
+  100% { box-shadow: 0 0 4px #ff9800, 0 0 12px #ff5722; }
+}
+
+.top-heart {
+  animation: fireGlow 1.5s infinite ease-in-out;
+  border: 2px solid #ff5722;
+  color: #fff !important;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
+/* Khi là ảnh top 10 – đổi nền từ vàng sang đen */
+.overlay.top.top-heart {
+  background: rgba(0, 0, 0, 0.85); /* 🌑 nền đen mờ */
+  color: #ff5722; /* giữ chữ màu vàng nếu bạn muốn */
+  padding: 6px 10px;
+  border-radius: 0 8px 8px 0;
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.5); /* tuỳ chọn: hiệu ứng lửa nhẹ */
+}
