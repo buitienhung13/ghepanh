@@ -12,11 +12,15 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2);
+  padding: 12px 0;
 }
+
 
 header a {
   margin: 0 10px;
@@ -169,4 +173,83 @@ h2 {
 @keyframes zaloFloat {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-4px); }
+}/* Thanh tìm kiếm */
+/* Thanh tìm kiếm (full chiều ngang, cân đối hơn) */
+.search-box {
+  width: 100%;
+  max-width: 720px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
+  background: #111;
+  color: #fff;
+  font-size: 17px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.search-box button {
+  background: #ffd700;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #fff;
+  color: #000;
+}
+
+
+.result-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.result-box img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; transform: scale(1.02); }
+}
+
+.notice {
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.notice.notfound {
+  color: #ff4444;
+}
+
+.caption {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 8px;
 }
