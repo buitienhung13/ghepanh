@@ -170,3 +170,45 @@ function startCountdown() {
   updateCountdown();
 }
 // JavaScript Document
+// =====================
+// 🔎 TÌM ẢNH THEO MÃ FILE
+// =====================
+document.addEventListener("DOMContentLoaded", () => {
+  const input = document.getElementById("searchInput");
+  const btn = document.getElementById("searchBtn");
+  const result = document.getElementById("result");
+
+  function showImage() {
+    const code = input.value.trim();
+    if (!code) {
+      result.innerHTML = `<p class="notice">Vui lòng nhập mã ảnh.</p>`;
+      return;
+    }
+
+    const extensions = ["jpg", "jpeg", "png", "webp", "JPG", "PNG"];
+    let found = false;
+
+    for (const ext of extensions) {
+      const imgPath = `images/${code}.${ext}`;
+      const img = new Image();
+      img.src = imgPath;
+      img.onload = () => {
+        found = true;
+        result.innerHTML = `
+          <div class="preview">
+            <img src="${imgPath}" alt="${code}">
+            <p class="caption">Mã ảnh: <b>${code}</b></p>
+          </div>`;
+      };
+    }
+
+    setTimeout(() => {
+      if (!found) result.innerHTML = `<p class="notice notfound">❌ Không tìm thấy ảnh "${code}"</p>`;
+    }, 700);
+  }
+
+  btn?.addEventListener("click", showImage);
+  input?.addEventListener("keypress", e => {
+    if (e.key === "Enter") showImage();
+  });
+});
