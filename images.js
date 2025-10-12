@@ -28,7 +28,7 @@ const sections = [
     items: [
       ["VIP1013.jpg", 20000], ["VIP1014.jpg", 20000],
       ["xhh05.JPEG", 20000], ["xhh16.jpg", 20000],
-      ["xhh18.jpg", 20000], ["xhh20.jpg", 20000]
+      ["xhh18.jpg", 22000], ["xhh20.jpg", 20000]
     ]
   },
   {
@@ -36,11 +36,11 @@ const sections = [
     class: "horizontal",
     items: [
       ["xbm01.JPEG", 20000], ["xbm02.JPEG", 19000], ["xbm03.JPEG", 20000],
-      ["xbm04.JPEG", 18000], ["xbm12.JPEG", 20000], ["xbm14.JPEG", 20000],
-      ["xbm07.JPEG", 14000], ["xbm08.JPEG", 16000],
+      ["xbm04.JPEG", 20000], ["xbm12.JPEG", 20000], ["xbm14.JPEG", 20000],
+      ["xbm07.JPEG", 15000], ["xbm08.JPEG", 16000],
       ["xbm17.JPEG", 20000], ["xbm18.JPEG", 20000],
-      ["xbm19.JPEG", 22000], ["xbm20.JPEG", 18000], ["xbm21.JPEG", 22000],
-      ["xbm24.jpg", 16000], ["xbm25.jpg", 12000],
+      ["xbm19.JPEG", 22000], ["xbm20.JPEG", 20000], ["xbm21.JPEG", 22000],
+      ["xbm24.jpg", 18000], ["xbm25.jpg", 12000],
       ["HOT0001.jpg", 20000], ["HOT0004.jpg", 20000],
       ["xbm26.jpg", 20000]
     ]
@@ -49,19 +49,19 @@ const sections = [
     title: "Xổ số pha lê",
     class: "horizontal",
     items: [
-      ["xbm05.JPEG", 25000], ["xbm06.PNG", 20000], ["xbm09.JPG", 25000],
+      ["xbm05.JPEG", 25000], ["xbm06.PNG", 20000], ["xbm09.JPG", 22000],
       ["xbm11.JPEG", 20000], ["xbm13.JPEG", 20000],
-      ["HOT0002.jpg", 20000], ["HOT0003.jpg", 20000],
+      ["HOT0002.jpg", 20000], ["HOT0003.jpg", 25000],
       ["xbm16.JPEG", 25000],
-      ["xbm22.JPEG", 35000], ["xbm23.jpg", 20000]
+      ["xbm22.JPEG", 35000], ["xbm23.jpg", 19000]
     ]
   },
   {
     title: "Xổ số bim bim",
     class: "horizontal",
     items: [
-      ["HOT1001.jpg", 20000], ["HOT1002.jpg", 20000],
-      ["xbm10.JPEG", 18000], ["xbm15.JPEG", 14000]
+      ["HOT1001.jpg", 22000], ["HOT1002.jpg", 20000],
+      ["xbm10.JPEG", 19000], ["xbm15.JPEG", 14000]
     ]
   },
   {
