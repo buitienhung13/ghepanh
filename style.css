@@ -181,8 +181,11 @@ h2 {
     align-items: center;
     gap: 10px;
     box-sizing: border-box;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 10%;
+    padding-right: 10%;
 }
-
 .search-box input {
   flex: 1;
   padding: 12px 16px;
