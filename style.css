@@ -176,13 +176,10 @@ h2 {
 }/* Thanh tìm kiếm */
 /* Thanh tìm kiếm (full chiều ngang, cân đối hơn) */
 .search-box {
-  width: 100%;
-  max-width: 720px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  padding: 10px 16px;
   box-sizing: border-box;
 }
 
