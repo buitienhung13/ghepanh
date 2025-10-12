@@ -183,8 +183,8 @@ h2 {
     box-sizing: border-box;
     padding-top: 0;
     padding-bottom: 0;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .search-box input {
   flex: 1;
