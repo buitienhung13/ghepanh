@@ -176,11 +176,11 @@ h2 {
 }/* Thanh tìm kiếm */
 /* Thanh tìm kiếm (full chiều ngang, cân đối hơn) */
 .search-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
 }
 
 .search-box input {
