@@ -4,7 +4,7 @@ const discountPercent = 20;
 
 const sections = [
   {
-    title: "Xổ số hoàng hôn",
+    title: "Xứ sở hoàng hôn",
     class: "vertical",
     items: [
       ["xhh01.JPEG", 20000], ["xhh02.JPEG", 20000], ["xhh03.JPEG", 18000],
@@ -23,7 +23,7 @@ const sections = [
     ]
   },
   {
-    title: "Xổ số tiên đầu",
+    title: "Xứ sở tiên đầu",
     class: "vertical",
     items: [
       ["VIP1013.jpg", 20000], ["VIP1014.jpg", 20000],
@@ -32,7 +32,7 @@ const sections = [
     ]
   },
   {
-    title: "Xổ số bình minh",
+    title: "Xứ sở bình minh",
     class: "horizontal",
     items: [
       ["xbm01.JPEG", 20000], ["xbm02.JPEG", 19000], ["xbm03.JPEG", 20000],
@@ -46,7 +46,7 @@ const sections = [
     ]
   },
   {
-    title: "Xổ số pha lê",
+    title: "Xứ sở pha lê",
     class: "horizontal",
     items: [
       ["xbm05.JPEG", 25000], ["xbm06.PNG", 20000], ["xbm09.JPG", 22000],
@@ -57,7 +57,7 @@ const sections = [
     ]
   },
   {
-    title: "Xổ số bim bim",
+    title: "Xứ sở bim bim",
     class: "horizontal",
     items: [
       ["HOT1001.jpg", 22000], ["HOT1002.jpg", 20000],
@@ -65,7 +65,7 @@ const sections = [
     ]
   },
   {
-    title: "Xổ số thần tiên",
+    title: "Xứ sở thần tiên",
     class: "vertical",
     items: [
       ["VIP1001.jpg", 30000], ["VIP1002.jpg", 30000],
