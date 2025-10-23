@@ -154,14 +154,19 @@ async function drawCanvas(){
   const imgKhung = await loadImage("khung/" + khung);
   drawImageCover(ctx, imgKhung, 0,0, canvas.width, canvas.height);
 
-  // Layer 3: Tag
+// Layer 3: Tag (luôn trùng cạnh đáy)
 if (skin && skin.tag) {
   const imgTag = await loadImage("tag/" + skin.tag + ".png");
-  const tagW = 380;   // độ rộng tag
-  const tagH = 380;   // độ cao tag
-  const tagX = (canvas.width - tagW) / 2;   // giữa theo chiều ngang
-  const tagY = (canvas.height - tagH) / 2 + 60; // giữa theo chiều dọc (trừ bớt 100px để hơi cao hơn giữa)
-  drawImageCover(ctx, imgTag, tagX, tagY, tagW, tagH);
+  if (imgTag) {
+    const tagW = 380; // width mong muốn
+    const scale = tagW / imgTag.width;
+    const tagH = imgTag.height * scale; // height scale theo width
+    const tagX = (canvas.width - tagW) / 2; 
+    const tagOffset = 455; // nâng lên bao nhiêu px từ đáy
+    const tagY = canvas.height - tagH - tagOffset; // cạnh dưới trùng với canvas
+
+    drawImageCover(ctx, imgTag, tagX, tagY, tagW, tagH);
+  }
 }
   // Layer 4: Thông thạo
   const imgThongthao = await loadImage("thongthao/" + thongthao);
