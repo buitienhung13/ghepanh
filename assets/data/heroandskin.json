@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Airi",
+    "skins": [
+      {"file":"airi-tnvt.jpg","displayName":"Thứ nguyên Vệ Thần","tag":"db5"},
+      {"file":"airi.jpg","displayName":"","tag":""}
+    ]
+  },
+    {
+    "name": "Liliana",
+    "skins": [
+      {"file":"liliana-wave1.jpg","displayName":"WaVe","tag":"wave1"},
+      {"file":"liliana-mptt.jpg","displayName":"Ma Pháp Tối Thượng","tag":"th8lq1"}
+    ]
+  }
+]
