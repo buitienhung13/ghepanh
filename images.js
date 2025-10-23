@@ -1,4 +1,4 @@
-// ? Trạng thái giảm giá
+﻿// ? Trạng thái giảm giá
 let enableSale = localStorage.getItem("saleOff") === "true" ? false : true;
 const discountPercent = 20;
 
