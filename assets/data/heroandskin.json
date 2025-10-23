@@ -12,5 +12,16 @@
       {"file":"liliana-wave1.jpg","displayName":"WaVe","tag":"wave1"},
       {"file":"liliana-mptt.jpg","displayName":"Ma Pháp Tối Thượng","tag":"th8lq1"}
     ]
+  },
+  {
+    "name": "Nakroth",
+    "skins": [
+      {"file":"nakroth.jpg","displayName":"","tag":""},
+      {"file":"nakroth-killua.jpg","displayName":"Killua","tag":"hxh"},
+      {"file":"nakroth-lqs.jpg","displayName":"Lôi Quang Sứ","tag":"sshh"},
+      {"file":"nakroth-tnvt.jpg","displayName":"thứ nguyên vệ thần","tag":"db3"},
+      {"file":"nakroth-bdct.jpg","displayName":"Bạch diện chiến thương","tag":"ssshh"},
+      {"file":"nakroth-qtld.jpg","displayName":"Quỷ thương Liệp Đế","tag":"ssshh"}
+    ]
   }
 ]
