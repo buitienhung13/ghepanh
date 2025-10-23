@@ -253,3 +253,36 @@ h2 {
   font-size: 16px;
   margin-top: 8px;
 }
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.2); /* nền mờ cho nổi bật */
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+}
+
+.nav a:hover {
+  color: #000;
+  background: #ffd700;
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.nav a.active {
+  color: #000;
+  background: #ffcc33;
+  border-color: #ffcc33;
+  box-shadow: 0 6px 15px rgba(255, 204, 51, 0.5);
+}
