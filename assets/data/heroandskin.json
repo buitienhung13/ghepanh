@@ -6,6 +6,17 @@
       {"file":"airi.jpg","displayName":"","tag":""}
     ]
   },
+  {
+    "name": "Hayate",
+    "skins": [
+      {"file":"hayate.jpg","displayName":"","tag":""},
+      {"file":"hayate-bl.jpg","displayName":"Bạch lang","tag":"ahh"},
+      {"file":"hayate-nl.jpg","displayName":"Ngân lang","tag":"valentine"},
+      {"file":"hayate-ttvt.jpg","displayName":"Tử thần vũ trụ","tag":"sshh"},
+      {"file":"hayate-tdtd.jpg","displayName":"Tu Di Thánh Đế","tag":"ssshh"},
+      {"file":"hayate-sdck.jpg","displayName":"Siêu đạo chích Kid","tag":"conan"}
+    ]
+  },
     {
     "name": "Liliana",
     "skins": [
