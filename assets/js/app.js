@@ -174,10 +174,10 @@ if (skin && skin.tag) {
 
   // Layer 5: Phép bổ trợ
   const imgPhep = await loadImage("phepbotro/" + phep);
-  const phepW = 134;
-  const phepH = 134;
+  const phepW = 137;
+  const phepH = 137;
   const phepX = (canvas.width - phepW) / 2;  // căn giữa ngang
-  const phepY = canvas.height - phepH - 26; // xích xuống một chút
+  const phepY = canvas.height - phepH - 30; // xích xuống một chút
   drawImageCover(ctx, imgPhep, phepX, phepY, phepW, phepH);
   
   // Layer 6: Tri kỉ
@@ -193,10 +193,10 @@ if (skin && skin.tag) {
     const imgVien = await loadImage(vien);
     
     // Kích thước mới: nhỏ 90% và dịch xuống 30px
-    const newWidth = canvas.width * 0.9;
-    const newHeight = canvas.height * 0.9;
+    const newWidth = canvas.width * 0.8;
+    const newHeight = canvas.height * 0.8;
     const newX = (canvas.width - newWidth) / 2; // căn giữa ngang
-    const newY = 426; // dịch xuống 30px
+    const newY = 486; // dịch xuống 30px
     
     drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
 }
@@ -217,7 +217,7 @@ if (skin && skin.tag) {
     } while(fontSize > 10);
 
     const x = canvas.width / 2;
-    const y = canvas.height - 330;  // xích xuống chút so với cũ
+    const y = canvas.height - 328;  // xích xuống chút so với cũ
 
     // Vẽ stroke đen bên ngoài
     ctx.lineWidth = 4;
@@ -253,17 +253,17 @@ if (skin && skin.tag) {
     ctx.strokeText(text, x, y);
 
     // Vẽ fill vàng
-    ctx.fillStyle = "#ffefae";
+    ctx.fillStyle = "#f9dc92ff";
     ctx.fillText(text, x, y);
 }
   // Layer 10: Tên game
-ctx.font = "75px Arial";
+ctx.font = "68px Arial";
 ctx.textAlign = "center";       // căn giữa ngang
 ctx.textBaseline = "middle";    // căn giữa dọc chữ
-ctx.fillStyle = vienvangCheck.checked ? "#ffefae" : "#ffffff"; // màu theo checkbox
+ctx.fillStyle = vienvangCheck.checked ? "#f9dc92ff" : "#ffffff"; // màu theo checkbox
 
 const x = canvas.width / 2;     // giữa canvas
-const y = canvas.height - 238;   // xích xuống một chút
+const y = canvas.height - 235;   // xích xuống một chút
 
 ctx.fillText(nameGame, x, y);
 }
