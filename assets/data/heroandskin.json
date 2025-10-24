@@ -7,6 +7,34 @@
     ]
   },
   {
+    "name": "Alice",
+    "skins": [
+      {"file":"alice-tnmg.jpg","displayName":"Tiên nữ mộng giới","tag":"9lq"}
+    ]
+  },
+  {
+    "name": "Aya",
+    "skins": [
+      {"file":"aya-cccv.jpg","displayName":"Công chúa cầu vồng","tag":"ssschh"},
+      {"file":"aya-tt.jpg","displayName":"Thủy thủ","tag":"ahh"},
+      {"file":"aya-hhtn.jpg","displayName":"Hỏa Hồ Tiên Ngư","tag":"scat"}
+    ]
+  },
+  {
+    "name": "Elsu",
+    "skins": [
+      {"file":"elsu-xtmg.jpg","displayName":"Xạ thần mộng giới","tag":"9lq"},
+      {"file":"elsu-dj.jpg","displayName":"DJ","tag":"mystic"}
+    ]
+  },
+  {
+    "name": "Eland'orr",
+    "skins": [
+      {"file":"elandorr-mgtc.jpg","displayName":"Mộng giới thần chủ","tag":"ssschh"},
+      {"file":"elandorr.jpg","displayName":"","tag":""}
+    ]
+  },
+  {
     "name": "Hayate",
     "skins": [
       {"file":"hayate.jpg","displayName":"","tag":""},
@@ -15,6 +43,12 @@
       {"file":"hayate-ttvt.jpg","displayName":"Tử thần vũ trụ","tag":"sshh"},
       {"file":"hayate-tdtd.jpg","displayName":"Tu Di Thánh Đế","tag":"ssshh"},
       {"file":"hayate-sdck.jpg","displayName":"Siêu đạo chích Kid","tag":"conan"}
+    ]
+  },
+  {
+    "name": "Krixi",
+    "skins": [
+      {"file":"krixi-pttk.jpg","displayName":"Phù thủy thời không","tag":"ssschh"}
     ]
   },
     {
@@ -31,7 +65,7 @@
       {"file":"nakroth-killua.jpg","displayName":"Killua","tag":"hxh"},
       {"file":"nakroth-lqs.jpg","displayName":"Lôi Quang Sứ","tag":"sshh"},
       {"file":"nakroth-tnvt.jpg","displayName":"thứ nguyên vệ thần","tag":"db3"},
-      {"file":"nakroth-bdct.jpg","displayName":"Bạch diện chiến thương","tag":"ssshh"},
+      {"file":"nakroth-bdct.jpg","displayName":"Bạch diện chiến thương","tag":"ssschh"},
       {"file":"nakroth-qtld.jpg","displayName":"Quỷ thương Liệp Đế","tag":"ssshh"}
     ]
   }
