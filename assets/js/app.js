@@ -196,7 +196,7 @@ if (skin && skin.tag) {
     const newWidth = canvas.width * 0.9;
     const newHeight = canvas.height * 0.9;
     const newX = (canvas.width - newWidth) / 2; // căn giữa ngang
-    const newY = 422; // dịch xuống 30px
+    const newY = 426; // dịch xuống 30px
     
     drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
 }
@@ -263,7 +263,7 @@ ctx.textBaseline = "middle";    // căn giữa dọc chữ
 ctx.fillStyle = vienvangCheck.checked ? "#ffefae" : "#ffffff"; // màu theo checkbox
 
 const x = canvas.width / 2;     // giữa canvas
-const y = canvas.height - 240;   // xích xuống một chút
+const y = canvas.height - 238;   // xích xuống một chút
 
 ctx.fillText(nameGame, x, y);
 }
