@@ -233,10 +233,23 @@ tuongSelect.addEventListener("change", () => {
 // Nút "Tạo ảnh"
 // ==================
 createBtn.addEventListener("click", async () => {
+  // Vô hiệu hóa nút và đổi chữ
+  createBtn.disabled = true;
+  createBtn.textContent = "⏳ Đang tạo ảnh...";
+
+  // Vẽ canvas
   await drawCanvas();
+
+  // Hiển thị canvas và nút lưu
   canvas.style.display = "block";
   saveBtn.style.display = "inline-block";
+
+  // Cuộn xuống canvas
   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+
+  // Bật lại nút và trả chữ về
+  createBtn.disabled = false;
+  createBtn.textContent = "✨ Tạo ảnh";
 });
 
 // ==================
@@ -248,7 +261,6 @@ saveBtn.addEventListener("click", ()=>{
   link.href = canvas.toDataURL("image/png");
   link.click();
 });
-
 // ==================
 // Init
 // ==================
