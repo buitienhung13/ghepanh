@@ -1,2 +1,0 @@
-# ghepanh
-Ghép Ảnh Game
