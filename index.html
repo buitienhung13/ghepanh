@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tạo khung skin Liên Quân</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+ <div class="container">
+  <h1 style="color: #FFFFFF">Tạo khung skin Liên Quân</h1><br>
+
+  <div class="controls">
+    <label>Chọn Tướng:
+      <select id="tuongSelect"></select>
+    </label>
+
+    <label>Chọn Skin:
+      <select id="skinSelect"></select>
+    </label>
+
+    <label>Chọn Khung:
+      <select id="khungSelect"></select>
+    </label>
+
+    <label>Chọn Phép bổ trợ:
+      <select id="phepSelect"></select>
+    </label>
+
+    <label>Chọn Thông thạo:
+      <select id="thongthaoSelect"></select>
+    </label>
+
+    <label>Chọn Tri kỉ:
+      <select id="trikiSelect"></select>
+    </label>
+
+    <label><input type="checkbox" id="vienvangCheck"> Có viền vàng</label>
+
+    <label>Nhập tên game của bạn:
+      <input type="text" id="tenGameInput" placeholder="Nhập tên game...">
+    </label>
+
+    <!-- Nút tạo ảnh -->
+    <button id="createBtn">✨ Tạo ảnh</button>
+
+    <!-- Canvas đặt ngay dưới các nút -->
+    <canvas id="preview" width="900" height="1200" style="display:none;"></canvas>
+
+    <!-- Nút lưu ảnh, ẩn trước -->
+    <button id="saveBtn" style="display:none;">💾 Lưu hình</button>
+  </div>
+</div>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
