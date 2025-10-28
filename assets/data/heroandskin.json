@@ -3,7 +3,39 @@
     "name": "Airi",
     "skins": [
       {"file":"airi-tnvt.jpg","displayName":"Thứ nguyên Vệ Thần","tag":"db5"},
-      {"file":"airi.jpg","displayName":"","tag":""}
+      {"file":"airi-nxl.jpg","displayName":"Ninja Xanh Lá","tag":"a"},
+      {"file":"airi-tk.jpg","displayName":"Thích Khách","tag":"shh"},
+      {"file":"airi-cvnt.jpg","displayName":"Cấm Vệ Nguyệt Tộc","tag":"sc"},
+      {"file":"airi-k.jpg","displayName":"Kiemono","tag":"ss"},
+      {"file":"airi-ke.jpg","displayName":"Kiemono","tag":"ssts"},
+      {"file":"airi-pkd.jpg","displayName":"Phó kiếm đạo","tag":"ahh"},
+      {"file":"airi-qxcn.jpg","displayName":"Quái xế công nghệ","tag":"ahh"},
+      {"file":"airi-tbb.jpg","displayName":"Tiệc bãi biển","tag":"schh"},
+      {"file":"airi-mh.jpg","displayName":"Mỵ Hồ","tag":"valentine"},
+      {"file":"airi-dctd.jpg","displayName":"Đặc công tử điệp","tag":"s"},
+      {"file":"airi-lhmx.jpg","displayName":"Lễ hội mùa xuân","tag":"s17"},
+      {"file":"airi-bhtn.jpg","displayName":"Bích hải thánh nữ","tag":"ssshh"},
+      {"file":"airi-tnxl.jpg","displayName":"Thánh nữ Xiêm La","tag":"schh"},
+      {"file":"airi-bbmm.jpg","displayName":"Búp bê Mộng mị","tag":"ssm70"},
+      {"file":"airi-nat.jpg","displayName":"Ninja ẩm thực","tag":"ahh"}
+    ]
+  },
+  {
+    "name": "Aleister",
+    "skins": [
+      {"file":"aleister.jpg","displayName":"","tag":""},
+		{"file":"aleister-tnha.jpg","displayName":"Thiếu Niên Hắc Ám","tag":"ahh"},
+		{"file":"aleister-qv.jpg","displayName":"Quang Vinh","tag":"s5"},
+		{"file":"aleister-qsnt.jpg","displayName":"Quỷ soái nguyệt tộc","tag":"s"},
+		{"file":"aleister-ssbr.jpg","displayName":"siêu sao bóng rổ","tag":"sc"},
+		{"file":"aleister-mvtt.jpg","displayName":"Mật vụ thần thám","tag":"schh"},
+		{"file":"aleister-atg.jpg","displayName":"Ảo thuật gia","tag":"ahh"},
+		{"file":"aleister-ads.jpg","displayName":"Âm dương sư","tag":"s"},
+		{"file":"aleister-xstt.jpg","displayName":"Xứ sở thần tiên","tag":"ahh"},
+		{"file":"aleister-hbb.jpg","displayName":"HLV bất bại","tag":"ss"},
+		{"file":"aleister-ancd.jpg","displayName":"Ác nhân đồ chơi","tag":"ssm68"},
+		{"file":"aleister-tlvc.jpg","displayName":"Tư lệnh viễn chinh","tag":"ahh"},
+    {"file":"aleister-svq.jpg","displayName":"S-Quang vinh","tag":"s4th2025"}
     ]
   },
   {
@@ -67,6 +99,12 @@
       {"file":"nakroth-tnvt.jpg","displayName":"thứ nguyên vệ thần","tag":"db3"},
       {"file":"nakroth-bdct.jpg","displayName":"Bạch diện chiến thương","tag":"ssschh"},
       {"file":"nakroth-qtld.jpg","displayName":"Quỷ thương Liệp Đế","tag":"ssshh"}
+    ]
+  },
+  {
+    "name": "",
+    "skins": [
+      {"file":"","displayName":"","tag":""}
     ]
   }
 ]
