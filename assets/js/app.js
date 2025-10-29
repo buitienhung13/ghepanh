@@ -206,7 +206,7 @@ async function drawCanvas(){
     ctx.strokeStyle = "black";
     ctx.strokeText(text, x, y);
 
-    ctx.fillStyle = "#f9dc92ff";
+    ctx.fillStyle = "#c9bc94";
     ctx.fillText(text, x, y);
   }
 
@@ -214,8 +214,8 @@ async function drawCanvas(){
   ctx.font = "68px Arial";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillStyle = vienvangCheck.checked ? "#f9dc92ff" : "#ffffff";
-  ctx.fillText(nameGame, canvas.width / 2, canvas.height - 235);
+  ctx.fillStyle = vienvangCheck.checked ? "#d7c8a5ff" : "#ffffff";
+  ctx.fillText(nameGame, canvas.width / 2, canvas.height - 230);
 }
 
 // ==================
