@@ -9,14 +9,14 @@
 
 <body>
   <div class="search-box">
-	    <img src="assets/logo-images/logo52hzmisfit.png" width="211" height="100" alt="logo"/>
+  <img src="assets/logo-images/logo52hzmisfit.png" alt="logo" class="logo-pulse" />
 </div>
 <p style="color:#ffffff;">
     - Chào bạn nha. mình biết bạn gặp khó khăn trong việc fake khung Liqi<br>
     - Nên mình đã tạo ra web này nè hihihi<br>
     - Cứ dùng thoải mái làm gì cũng được nhóa hẹ he hẹ<br>
     - cre: 52HzMisfit (không cre cũng chẳng sao đâu thoải mái đi hehehee:)))) <br>
-    <h3 style="color:#ea0101;">Lưu ý: Mở bằng trình duyệt bên ngoài mới lưu ảnh được nha.</h3>
+    <h3 class="rainbow-text">Lưu ý: Mở bằng trình duyệt bên ngoài mới lưu ảnh được nha.</h3>
     <br>
  <div class="container">
   <h1 style="color: #FFFFFF">Tạo khung skin Liên Quân</h1><br>
@@ -46,7 +46,15 @@
       <select id="trikiSelect"></select>
     </label>
 
-    <label><input type="checkbox" id="vienvangCheck"> Có viền vàng</label>
+    <div class="switch-label">
+  <span>Có viền vàng</span>
+
+  <!-- <-- dùng label cho switch để click vào slider sẽ toggle checkbox -->
+  <label class="switch">
+    <input type="checkbox" id="vienvangCheck">
+    <span class="slider"></span>
+  </label>
+</div>
 
     <label>Nếu dán tên kí tự thì hãy gõ một chữ rồi dán nha <br>
       Nhập tên game của bạn:
