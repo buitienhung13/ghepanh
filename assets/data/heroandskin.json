@@ -2,6 +2,7 @@
   {
     "name": "Airi",
     "skins": [
+      {"file":"airi.jpg","displayName":"","tag":""},
       {"file":"airi-tnvt.jpg","displayName":"Thứ nguyên Vệ Thần","tag":"db5"},
       {"file":"airi-nxl.jpg","displayName":"Ninja Xanh Lá","tag":"a"},
       {"file":"airi-tk.jpg","displayName":"Thích Khách","tag":"shh"},
@@ -41,7 +42,92 @@
   {
     "name": "Alice",
     "skins": [
+      {"file":"alice.jpg","displayName":"","tag":""},
+      {"file":"alice1.jpg","displayName":"Nhà chiêm tinh","tag":"a"},
+      {"file":"alice2.jpg","displayName":"Bé Gấu Tuyết","tag":"sc"},
+      {"file":"alice3.jpg","displayName":"Xứ sở thần tiên","tag":"ahh"},
+      {"file":"alice4.jpg","displayName":"Dạ hội","tag":"ahh"},
+      {"file":"alice5.jpg","displayName":"Tiểu quỷ bí ngô","tag":"sc"},
+      {"file":"alice6.jpg","displayName":"bé du xuân","tag":"schh"},
+      {"file":"alice7.jpg","displayName":"Phi hành gia","tag":"mystic"},
+      {"file":"alice8.jpg","displayName":"Tiểu tiên tử","tag":"scp"},
+      {"file":"alice9.jpg","displayName":"Butterfly Mansion Girl","tag":"ds"},
+      {"file":"alice10.jpg","displayName":"Eternal Sailor Chibi Moon","tag":"moon"},
+      {"file":"alice11.jpg","displayName":"Xứ sở diệu kỳ","tag":"schh"},
+      {"file":"alice12.jpg","displayName":"Ốc quế tinh nghịch","tag":"ssm66"},
+      {"file":"alice13.jpg","displayName":"Quân nhạc Athanor","tag":"sshh"},
       {"file":"alice-tnmg.jpg","displayName":"Tiên nữ mộng giới","tag":"9lq"}
+    ]
+  },
+  {
+    "name": "Allain",
+    "skins": [
+      {"file":"allain.jpg","displayName":"","tag":""},
+      {"file":"allain2.jpg","displayName":"Kirito Hắc kiếm sĩ","tag":"sshhp"},
+      {"file":"allain3.jpg","displayName":"Kirito","tag":"cl"},
+      {"file":"allain4.jpg","displayName":"Tuyết sơn song kiếm","tag":"sshh"},
+      {"file":"allain5.jpg","displayName":"Thần mặt trời","tag":"schh"},
+      {"file":"allain6.jpg","displayName":"Bạch kiếm sĩ","tag":"sc"},
+      {"file":"allain7.jpg","displayName":"Hạo thiên khuyển","tag":"scp"},
+      {"file":"allain8.jpg","displayName":"Tình yêu nổi loạn","tag":"schh"},
+      {"file":"allain9.jpg","displayName":"Lân sư Vũ thần","tag":"tx"},
+      {"file":"allain10.jpg","displayName":"Cẩm y vệ Xích Hổ","tag":"ssm81"}
+    ]
+  },
+  {
+    "name": "Amily",
+    "skins": [
+      {"file":"amily.jpg","displayName":"","tag":""},
+      {"file":"amily2.jpg","displayName":"Đặc cảnh NYPD","tag":"a"},
+      {"file":"amily3.jpg","displayName":"Thư ký","tag":"shh"},
+      {"file":"amily4.jpg","displayName":"Đặc công nhện đỏ","tag":"sc"},
+      {"file":"amily5.jpg","displayName":"Thỏ may mắn","tag":"schh"},
+      {"file":"amily6.jpg","displayName":"Võ thần thiên hà","tag":"schh"},
+      {"file":"amily7.jpg","displayName":"Khủng long xanh","tag":"ahh"},
+      {"file":"amily8.jpg","displayName":"Nữ đội trưởng","tag":"ahh"},
+      {"file":"amily9.jpg","displayName":"Hội ám hoàng","tag":"s20"},
+      {"file":"amily10.jpg","displayName":"Thám tử trung học","tag":"shh"}
+    ]
+  },
+  {
+    "name": "Annette",
+    "skins": [
+      {"file":"annette.jpg","displayName":"","tag":""},
+      {"file":"annette2.jpg","displayName":"Nữ quản ga","tag":"a"},
+      {"file":"annette3.jpg","displayName":"Xứ sở thần tiên","tag":"ahh"},
+      {"file":"annette4.jpg","displayName":"Thần tượng âm nhạc","tag":"schh"},
+      {"file":"annette5.jpg","displayName":"Tiệc bãi biển","tag":"schh"},
+      {"file":"annette6.jpg","displayName":"Tiên tri tập sự","tag":"ms"},
+      {"file":"annette7.jpg","displayName":"Chị ong bay thấp","tag":"schh"},
+      {"file":"annette8.jpg","displayName":"Nữ sinh trung học","tag":"bleach"},
+      {"file":"annette9.jpg","displayName":"Vân mộng tiên tử","tag":"ahh"},
+      {"file":"annette10.jpg","displayName":"Phi hành gia","tag":"schh"},
+      {"file":"annette11.jpg","displayName":"Băng kỳ lâm","tag":"ahh"},
+      {"file":"annette12.jpg","displayName":"Doombot thơ ngây","tag":"scaov"}
+    ]
+  },
+  {
+    "name": "Aoi",
+    "skins": [
+      {"file":"aoi.jpg","displayName":"","tag":""},
+      {"file":"aoi2.jpg","displayName":"Sát Thủ Đô Thị","tag":"ahh"},
+      {"file":"aoi3.jpg","displayName":"Hoàng kim công chúa","tag":"aog"},
+      {"file":"aoi4.jpg","displayName":"Tiệc bãi biển","tag":"ahh"},
+      {"file":"aoi5.jpg","displayName":"Lam Hải quận chúa","tag":"schh"},
+      {"file":"aoi6.jpg","displayName":"Tiểu thư Mafia","tag":"schh"},
+      {"file":"aoi7.jpg","displayName":"Sát thủ Dạ Ưng","tag":"ssm65"},
+      {"file":"aoi8.jpg","displayName":"Quán quân","tag":"fmvp"}
+    ]
+  },
+  {
+    "name": "Arthur",
+    "skins": [
+      {"file":"arthur.jpg","displayName":"","tag":""},
+      {"file":"arthur4.jpg","displayName":"Si Tình Kiếm","tag":"valentine"},
+      {"file":"arthur7.jpg","displayName":"Hiệp sĩ trăng khuyết","tag":"sc"},
+      {"file":"arthur8.jpg","displayName":"Siêu Việt","tag":"sshh"},
+      {"file":"arthur9.jpg","displayName":"Băng lam kiếm vệ","tag":"schh"},
+      {"file":"arthur10.jpg","displayName":"Tôn Hổ vô song","tag":"mystic"}
     ]
   },
   {
