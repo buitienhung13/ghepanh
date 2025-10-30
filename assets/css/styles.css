@@ -270,3 +270,43 @@ input:checked + .slider:before {
     filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
   }
 }
+/* 🔹 App bar */
+.app-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  padding: 12px 0;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* 🔹 Nút cơ bản (chưa active) */
+.app-bar a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+/* Hover (chỉ làm sáng nhẹ viền) */
+.app-bar a:hover {
+  border-color: #b57eff;
+  color: #b57eff;
+}
+
+/* 🔹 Nút đang active (trang hiện tại) */
+.app-bar a.active {
+  background: linear-gradient(90deg, #4c65f6 0%, #b57eff 100%);
+  border: none;
+  box-shadow: 0 0 15px rgba(181, 126, 255, 0.5);
+  color: #fff;
+}
