@@ -97,11 +97,6 @@ header {
 }
 
 /* Card */
-.card {
-  width: 90vw;             /* chiếm 90% màn hình */
-  max-width: 360px;       /* tối đa 1080px */
-  box-sizing: border-box;
-}
 .card a {
   text-decoration: none; /* xóa gạch chân */
   color: inherit;        /* giữ màu chữ trắng hoặc gradient hiển thị đúng */
@@ -127,7 +122,7 @@ header {
 }
 .card {
   width: 90vw;               /* chiếm 90% màn hình */
-  max-width: 360px;          /* tối đa 360px */
+  max-width: 520px;          /* tối đa 360px */
   box-sizing: border-box;
   border: 2px solid #6c09d0; /* viền bao quanh */
   border-radius: 10px;       /* bo góc */

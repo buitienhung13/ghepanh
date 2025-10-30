@@ -29,7 +29,7 @@
 /* Ảnh chi tiết */
 #detailContainer img {
   width: 90vw;          /* chiếm 90% chiều ngang màn hình */
-  max-width: 360px;    /* tối đa 1080px */
+  max-width: 520px;    /* tối đa 1080px */
   height: auto;         /* giữ tỉ lệ gốc */
   object-fit: contain;  /* giữ tỉ lệ 9:16 hay 16:9 */
   display: block;
