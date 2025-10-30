@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chi tiết Design</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <link rel="stylesheet" href="assets/css/detail.css">
+</head>
+<body>
+  <div class="search-box">
+    <img src="assets/logo-images/logo52hzmisfit.png" alt="logo" class="logo-pulse" />
+  </div>
+
+  <header>
+    <a href="gallery.html" class="back-btn">&larr; Quay lại</a>
+    <h1 style="color: #FFFFFF">Chi tiết Thiết kế</h1>
+  </header>
+
+  <main id="detailContainer"></main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      fetch('assets/data/gallery.json')
+        .then(res => res.json())
+        .then(data => {
+          const item = data.find(i => i.id.toLowerCase() === id.toLowerCase());
+          const container = document.getElementById("detailContainer");
+
+          if(item) {
+            // Kiểm tra item.links (mảng) và render tất cả link
+            let linksHTML = '';
+            if(Array.isArray(item.links)) {
+              linksHTML = item.links
+                .map(link => `<a href="${link.url}" target="_blank" class="detail-link">${link.text}</a>`)
+                .join(' ');
+            }
+
+            container.innerHTML = `
+              <div class="detail-card">
+                <img id="detailImage" src="${item.image}" alt="${item.title}">
+                <h2>${item.title}</h2>
+                <p>${item.description}</p>
+                <div class="links-container">${linksHTML}</div>
+              </div>
+            `;
+          } else {
+            container.innerHTML = `<p style="color:white;">Không tìm thấy thông tin ảnh.</p>`;
+          }
+        })
+        .catch(err => console.error('Lỗi load chi tiết:', err));
+    });
+  </script>
+</body>
+</html>
