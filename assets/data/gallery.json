@@ -1,5 +1,15 @@
 [
   {
+    "id": "Code002 ảnh dọc",
+    "title": "Code Alight Motion",
+    "image": "assets/images/designs/code002.jpg",
+    "description": "Link ở dưới đây",
+    "links": [
+      { "url": "https://alightcreative.com/am/share/u/oeu0RklPsGVZdqLWCg5WqjGSpnk1/p/3ZlPSe2Hgv-758d2c2bbcbbc1a9?source=link", "text": "Code 5mb" },
+      { "url": "https://drive.google.com/file/d/1ITfuxKJyLimyBeAMS2CdfznyBAk9fXox/view?usp=drivesdk", "text": "Code XML" }
+    ]
+  },
+  {
     "id": "Code001 ảnh ngang",
     "title": "Code Alight Motion",
     "image": "assets/images/designs/code001.jpg",
