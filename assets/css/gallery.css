@@ -36,7 +36,7 @@ header {
   margin-top: 8px;
 }
 .card {
-  width: 90vw;               /* chiếm 90% màn hình */
+  width: 100%;               /* chiếm 90% màn hình */
   max-width: 520px;          /* tối đa 360px */
   box-sizing: border-box;
   border: 2px solid #6c09d0; /* viền bao quanh */
