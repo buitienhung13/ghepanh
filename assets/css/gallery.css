@@ -1,8 +1,35 @@
-
-header {
-  text-align: center;
-  padding: 20px;
+/* ===== SEARCH SECTION ===== */
+.search-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
+
+/* Ô tìm kiếm */
+#searchInput {
+  width: 90%;
+  max-width: 800px;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  outline: none;
+  background-color: #aa00ff1a;
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+
+#searchInput:hover,
+#searchInput:focus {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  transform: scale(1.02);
+}
+/* ===== GALLERY STYLES ===== */
+
 /* Container gallery căn giữa */
 #galleryContainer {
   display: flex;
@@ -37,7 +64,7 @@ header {
 }
 .card {
   width: 100%;               /* chiếm 90% màn hình */
-  max-width: 520px;          /* tối đa 360px */
+  max-width: 520px;          /* tối đa 520px */
   box-sizing: border-box;
   border: 2px solid #6c09d0; /* viền bao quanh */
   border-radius: 10px;       /* bo góc */

@@ -20,6 +20,7 @@
   color: #fff;
   transform: translateY(-2px);
 }
+
 /* Container ảnh (giữ nguyên container của bạn) */
 #detailContainer {
   display: flex;

@@ -27,3 +27,12 @@ searchInput.addEventListener("input", e => {
   const filtered = galleryData.filter(i => i.id.toLowerCase().includes(keyword));
   renderGallery(filtered);
 });
+// Tự động highlight nút active dựa vào URL hiện tại
+const links = document.querySelectorAll('.app-bar a');
+links.forEach(link => {
+  if (link.href === window.location.href) {
+    link.classList.add('active');
+  } else {
+    link.classList.remove('active');
+  }
+});
