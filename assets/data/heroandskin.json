@@ -131,11 +131,58 @@
     ]
   },
   {
+    "name": "Arum",
+    "skins": [
+      {"file":"arum.jpg","displayName":"","tag":""},
+      {"file":"arum3.jpg","displayName":"Vũ khúc long hổ","tag":"sshh"},
+      {"file":"arum5.jpg","displayName":"Vũ khúc thần sứ","tag":"ssts"},
+      {"file":"arum6.jpg","displayName":"Thỏ may mắn","tag":"schh"},
+      {"file":"arum7.jpg","displayName":"Bạn muốn hẹn hò?","tag":"schh"},
+      {"file":"arum8.jpg","displayName":"Quản lý tài năng","tag":"5thanniv"},
+      {"file":"arum10.jpg","displayName":"Thần tượng nhạc Rock","tag":"aovday2024a"},
+      {"file":"arum11.jpg","displayName":"Thần phong Thống lĩnh","tag":"ssm69"},
+      {"file":"arum12.jpg","displayName":"Ký Ức Đại Dương","tag":"schhp"}
+    ]
+  },
+  {
+    "name": "Astrid",
+    "skins": [
+      {"file":"astrid.jpg","displayName":"","tag":""},
+      {"file":"astrid4.jpg","displayName":"Tổ trưởng học đường","tag":"ahh"},
+      {"file":"astrid5.jpg","displayName":"thần thoại hy lạp","tag":"ahh"},
+      {"file":"astrid6.jpg","displayName":"Xứ sở diệu kỳ","tag":"ahh"},
+      {"file":"astrid7.jpg","displayName":"Thần Trí Tuệ","tag":"tanxuan"},
+      {"file":"astrid8.jpg","displayName":"Nữ tổng tài","tag":"ahh"},
+      {"file":"astrid9.jpg","displayName":"Hoa anh đào","tag":"ahh"},
+      {"file":"astrid10.jpg","displayName":"Nữ thuyền trưởng","tag":"ahh"}
+    ]
+  },
+  {
+    "name": "Ata",
+    "skins": [
+      {"file":"ata.jpg","displayName":"","tag":""},
+      {"file":"ata4.jpg","displayName":"Chiến Binh Hải Tộc","tag":"ahh"},
+      {"file":"ata5.jpg","displayName":"Mèo đi mưa","tag":"ahh"},
+      {"file":"ata7.jpg","displayName":"Gà mờ","tag":"ssm63"},
+      {"file":"ata8.jpg","displayName":"Giao long","tag":"ahh"}
+    ]
+  },
+  {
     "name": "Aya",
     "skins": [
+      {"file":"aya.jpg","displayName":"","tag":""},
+      {"file":"aya2.jpg","displayName":"Hoạt náo viên","tag":"a"},
+      {"file":"aya3.jpg","displayName":"MC Sóc nhỏ","tag":"schh"},
+      {"file":"aya5.jpg","displayName":"Điệp viên ký ức","tag":"lienquan7"},
       {"file":"aya-cccv.jpg","displayName":"Công chúa cầu vồng","tag":"ssschh"},
       {"file":"aya-tt.jpg","displayName":"Thủy thủ","tag":"ahh"},
       {"file":"aya-hhtn.jpg","displayName":"Hỏa Hồ Tiên Ngư","tag":"scat"}
+    ]
+  },
+  {
+    "name": "Azzen'Ka",
+    "skins": [
+      {"file":"azzenka.jpg","displayName":"","tag":""}
     ]
   },
   {
