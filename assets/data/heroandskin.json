@@ -186,6 +186,73 @@
     ]
   },
   {
+    "name": "Baldum",
+    "skins": [
+      {"file":"baldum.jpg","displayName":"","tag":""},
+      {"file":"baldum7.jpg","displayName":"Sói Quàng Khăn Đỏ","tag":"ssm78"}
+    ]
+  },
+  {
+    "name": "Bijan",
+    "skins": [
+      {"file":"bijan.jpg","displayName":"","tag":""},
+      {"file":"bijan2.jpg","displayName":"Chiến binh sa mạc","tag":"s"},
+      {"file":"bijan3.jpg","displayName":"Hoàng kim cơ giáp","tag":"ss"},
+      {"file":"bijan4.jpg","displayName":"Kình thiên Long Kỵ","tag":"ssshh"},
+      {"file":"bijan5.jpg","displayName":"Đập vỡ Cây đàn","tag":"ssm67"},
+      {"file":"bijan6.jpg","displayName":"Lữ Hành Thời Không","tag":"sshh"}
+    ]
+  },
+  {
+    "name": "Bonnie",
+    "skins": [
+      {"file":"bonnie.jpg","displayName":"","tag":""},
+      {"file":"bonnie2.jpg","displayName":"Thỏ ma quái","tag":"s"},
+      {"file":"bonnie3.jpg","displayName":"Cô bé sợ ma","tag":"sc"},
+      {"file":"bonnie4.jpg","displayName":"Hoa hướng dương","tag":"ahh"},
+      {"file":"bonnie5.jpg","displayName":"S-Quang vinh","tag":"s3th2025"}
+    ]
+  },
+  {
+    "name": "Bright",
+    "skins": [
+      {"file":"bright.jpg","displayName":"","tag":""},
+      {"file":"bright2.jpg","displayName":"Soái ca thánh điện","tag":"a"},
+      {"file":"bright3.jpg","displayName":"Toshiro Hitsugaya","tag":"bleach"},
+      {"file":"bright4.jpg","displayName":"Khiêu chiến","tag":"aic2021"},
+      {"file":"bright5.jpg","displayName":"Mật vụ hacker","tag":"schh"},
+      {"file":"bright6.jpg","displayName":"Kỳ Lân Soái","tag":"ahh"},
+      {"file":"bright7.jpg","displayName":"Vua về nhì","tag":"ssm63"},
+      {"file":"bright8.jpg","displayName":"Nhà thám hiểm","tag":"ahh"}
+    ]
+  },
+  {
+    "name": "Butterfly",
+    "skins": [
+      {"file":"butterfly.jpg","displayName":"","tag":""},
+      {"file":"butterfly2.jpg","displayName":"Thủy thủ","tag":"a"},
+      {"file":"butterfly3.jpg","displayName":"Xuân nữ ngổ ngáo","tag":"tanxuan2"},
+      {"file":"butterfly4.jpg","displayName":"Teen Nữ Công Nghệ","tag":"s"},
+      {"file":"butterfly5.jpg","displayName":"Nữ Quái Nổi Loạn","tag":"ss"},
+      {"file":"butterfly6.jpg","displayName":"Quận Chúa Đế Chế","tag":"sc"},
+      {"file":"butterfly7.jpg","displayName":"Đông êm đềm","tag":"christmas"},
+      {"file":"butterfly8.jpg","displayName":"Phượng Cửu Thiên","tag":"ssshh"},
+      {"file":"butterfly9.jpg","displayName":"Cẩm y vệ: Chu Tước","tag":"sc"},
+      {"file":"butterfly10.jpg","displayName":"Asuna Tia chớp","tag":"sshh"},
+      {"file":"butterfly11.jpg","displayName":"Stacia","tag":"cl"},
+      {"file":"butterfly12.jpg","displayName":"Thánh nữ khởi nguyên","tag":"ss"},
+      {"file":"butterfly13.jpg","displayName":"Kim ngư thần nữ","tag":"ss"},
+      {"file":"butterfly14.jpg","displayName":"Gánh anh đến cùng","tag":"schh"},
+      {"file":"butterfly15.jpg","displayName":"Tình yêu nổi loạn","tag":"schh"},
+      {"file":"butterfly16.jpg","displayName":"Rockgirl Siêu Đẳng","tag":"aovday2024ss"},
+      {"file":"butterfly17a.jpg","displayName":"Bình minh tận thế","tag":"evo1"},
+      {"file":"butterfly17b.jpg","displayName":"Bình minh tận thế","tag":"evo2"},
+      {"file":"butterfly17c.jpg","displayName":"Bình minh tận thế","tag":"evo3"},
+      {"file":"butterfly17d.jpg","displayName":"Bình minh tận thế","tag":"evo4"},
+      {"file":"butterfly17e.jpg","displayName":"Bình minh tận thế","tag":"evo5"}
+    ]
+  },
+  {
     "name": "Elsu",
     "skins": [
       {"file":"elsu-xtmg.jpg","displayName":"Xạ thần mộng giới","tag":"9lq"},
