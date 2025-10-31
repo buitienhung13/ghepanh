@@ -3,23 +3,37 @@
 <head>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347855396412381"
      crossorigin="anonymous"></script>
-  
+
   <meta charset="UTF-8">
   <title>Chi tiết Design</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/background.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/gallery.css">
   <link rel="stylesheet" href="assets/css/detail.css">
 </head>
 <body>
-  <div class="search-box">
+  <!-- 🌀 Loader -->
+    <div class="loader-container">
+      <div class="loader">
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--text">Loading...</div>
+      </div>
+    </div>
+    <script src="assets/js/custom.js"></script>
+  <!-- 🌀 End Loader -->
+  <header>
+    <a href="gallery.html" class="back-btn">&larr; Quay lại</a>
+  </header>
+<div class="search-box">
     <img src="assets/logo-images/logo52hzmisfit.png" alt="logo" class="logo-pulse" />
   </div>
-
-  <header>
-    <a href="gallery.html" class="back-btn">&larr; Quay lại</a><br><br>
-    <h1 style="color: #FFFFFF">Chi tiết Thiết kế</h1>
-  </header>
-
+  <h1 style="color: #FFFFFF">Chi tiết Thiết kế</h1><br>
   <main id="detailContainer"></main>
 
   <script>

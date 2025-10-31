@@ -3,26 +3,54 @@
 <head>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8347855396412381"
      crossorigin="anonymous"></script>
-  
+
   <meta charset="UTF-8">
   <title>Thư viện Design</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/appbar.css">
+  <link rel="stylesheet" href="assets/css/profile.css">
+  <link rel="stylesheet" href="assets/css/background.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
   <link rel="stylesheet" href="assets/css/gallery.css">
 </head>
 <body>
-     <div class="search-box">
-  <img src="assets/logo-images/logo52hzmisfit.png" alt="logo" class="logo-pulse" />
-</div>
+  <!-- 🌀 Loader -->
+    <div class="loader-container">
+      <div class="loader">
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--dot"></div>
+        <div class="loader--text">Loading...</div>
+      </div>
+    </div>
+    <script src="assets/js/custom.js"></script>
+  <!-- 🌀 End Loader -->
     <header>
     <nav class="app-bar">
-      <a href="index.html">Home</a>
-      <a href="gallery.html" class="active">Design</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="gallery.html">Design</a>
+      <!-- Hamburger menu -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     </nav>
+    <!-- Popup thông tin liên hệ -->
+  <div id="contactPopupContainer"></div>
   </header>
-  <header>
-    <h1 style="color: #FFFFFF">Code Alight Motion Ghép Ảnh AOV</h1>
-    <input type="text" id="searchInput" placeholder="Tìm ảnh...">
-  </header>
+  <script src="assets/js/profile.js"></script>
+  <div class="search-box">
+  <img src="assets/logo-images/logo52hzmisfit.png" alt="logo" class="logo-pulse" />
+</div>
+<h1 style="color: #FFFFFF">Code Alight Motion Ghép Ảnh AOV</h1>
+
+  <section class="search-section">
+  <input type="text" id="searchInput" placeholder="Tìm ảnh...">
+  </section>
 
   <main id="galleryContainer"></main>
 
