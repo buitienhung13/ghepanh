@@ -10,9 +10,10 @@ body {
   background-color: #0a0018;
   color: #ffffff;
   min-height: 100vh;
-  /* ❌ bỏ flex center — gây thu nhỏ trên mobile */
+  display: flex;
+  justify-content: center; /* căn giữa ngang */
+  align-items: center;     /* căn giữa dọc */
   padding: 20px 10px;
-  display: block; /* hoặc bỏ hẳn display này */
 }
 
 /* ===== CONTAINER ===== */
@@ -26,7 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* ❌ bỏ justify-content và text-align center */
 }
 
 /* ===== SEARCH SECTION ===== */
