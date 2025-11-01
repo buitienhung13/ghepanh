@@ -53,13 +53,13 @@
 
 /* Icon bên cạnh từng thông tin */
 .contact-popup p::before {
-  content: '📧';
+  content: '⭐';
   margin-right: 8px;
   display: inline-block;
 }
 
-.contact-popup p:nth-child(2)::before { content: '📞'; }
-.contact-popup p:nth-child(3)::before { content: '🌐'; }
+.contact-popup p:nth-child(2)::before { content: '✉️'; }
+.contact-popup p:nth-child(3)::before { content: '📞'; }
 
 /* Nút đóng */
 #closePopup {

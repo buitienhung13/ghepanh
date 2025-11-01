@@ -4,74 +4,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 15px 0;
+  padding: 0 10px; /* tránh tràn màn hình */
 }
 
 /* Ô tìm kiếm */
 #searchInput {
-  width: 90%;
-  max-width: 800px;
-  padding: 14px 22px;
+  width: 100%;
+  max-width: 600px;   /* giảm max-width cho điện thoại */
+  padding: 12px 18px; /* giảm padding */
   border: none;
   border-radius: 30px;
   font-size: 1rem;
   outline: none;
   background-color: #aa00ff1a;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
-
 #searchInput:hover,
 #searchInput:focus {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   transform: scale(1.02);
 }
-/* ===== GALLERY STYLES ===== */
 
-/* Container gallery căn giữa */
+/* ===== GALLERY STYLES ===== */
 #galleryContainer {
   display: flex;
-  flex-direction: column;  /* xếp dọc */
-  align-items: center;     /* căn giữa các card */
-  gap: 20px;               /* khoảng cách giữa card */
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0 10px; /* tránh card chạm mép màn hình */
 }
 
-/* Card */
-.card a {
-  text-decoration: none; /* xóa gạch chân */
-  color: inherit;        /* giữ màu chữ trắng hoặc gradient hiển thị đúng */
-}
-
-/* Ảnh trong card */
-.card img {
-  width: 100%;             /* lấp đầy chiều ngang card */
-  height: auto;            /* giữ tỉ lệ gốc */
-  display: block;
-  object-fit: contain;     /* không crop ảnh, giữ aspect ratio */
-}
-.card-id {
-  padding: 6px 12px;
-  /*border: 2px solid #ffffff; /* viền trắng */
-  border-radius: 6px;
-  background: linear-gradient(90deg, #b57eff, #4c65f6); /* gradient */
-  color: #fff;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  margin-top: 8px;
-}
 .card {
-  width: 100%;               /* chiếm 90% màn hình */
-  max-width: 520px;          /* tối đa 520px */
+  width: 100%;
+  max-width: 100%; /* chiếm vừa đủ container */
   box-sizing: border-box;
-  border: 2px solid #6c09d0; /* viền bao quanh */
-  border-radius: 10px;       /* bo góc */
+  border: 2px solid #6c09d0;
+  border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  background-color: transparent; /* trong suốt */
-  padding: 8px;              /* khoảng cách ảnh + ID với viền: 8px ~ 5-10px */
+  background-color: transparent;
+  padding: 8px;
 }
 
 .card img {
@@ -79,15 +55,28 @@
   height: auto;
   display: block;
   object-fit: contain;
-  margin-bottom: 8px;        /* cách ID phía dưới */
+  margin-bottom: 8px;
 }
 
 .card-id {
-  padding: 6px 12px;
+  padding: 5px 10px;
   background: linear-gradient(90deg, #b57eff, #4c65f6);
   color: #fff;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
   text-align: center;
-  border-radius: 5px;        /* bo nhẹ cho ID */
+  border-radius: 5px;
+}
+
+/* ===== MEDIA QUERY CHO MOBILE ===== */
+@media (max-width: 480px) {
+  #searchInput {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+  }
+
+  .card-id {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
 }
