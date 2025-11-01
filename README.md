@@ -2,7 +2,7 @@
 Một dự án mẫu về tạo khung skin Liên Quân.
 
 ## Cài Đặt
-1. Clone repo: `git clone https://github.com/username/repo.git`
+1. Clone repo: `git clone https://52hzmisfit.io.vn`
 2. Mở file `index.html` trên trình duyệt.
 
 ## Hướng Dẫn Sử Dụng
