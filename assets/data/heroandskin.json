@@ -204,6 +204,13 @@
     ]
   },
   {
+    "name": "Billow",
+    "skins": [
+      {"file":"billow.jpg","displayName":"","tag":""},
+      {"file":"billow2.jpg","displayName":"Thiên Tướng - Độ Ách","tag":"sschh"}
+    ]
+  },
+  {
     "name": "Bonnie",
     "skins": [
       {"file":"bonnie.jpg","displayName":"","tag":""},
@@ -278,6 +285,15 @@
     ]
   },
   {
+    "name": "Iggy",
+    "skins": [
+      {"file":"iggy.jpg","displayName":"","tag":""},
+      {"file":"iggy3.jpg","displayName":"Thần Miêu thiếu chủ","tag":"schhp"},
+      {"file":"iggy5.jpg","displayName":"Tiếng thét Hỗn mang","tag":"ssm67"},
+      {"file":"iggy6.jpg","displayName":"Rimuru Tempest","tag":"slime"}
+    ]
+  },
+  {
     "name": "Krixi",
     "skins": [
       {"file":"krixi-pttk.jpg","displayName":"Phù thủy thời không","tag":"ssschh"}
@@ -299,6 +315,20 @@
       {"file":"nakroth-tnvt.jpg","displayName":"thứ nguyên vệ thần","tag":"db3"},
       {"file":"nakroth-bdct.jpg","displayName":"Bạch diện chiến thương","tag":"ssschh"},
       {"file":"nakroth-qtld.jpg","displayName":"Quỷ thương Liệp Đế","tag":"ssshh"}
+    ]
+  },
+  {
+    "name": "Qi",
+    "skins": [
+      {"file":"qi.jpg","displayName":"","tag":""},
+      {"file":"qi9.jpg","displayName":"Milim Nava","tag":"slime"}
+    ]
+  },
+  {
+    "name": "Taara",
+    "skins": [
+      {"file":"taara.jpg","displayName":"","tag":""},
+      {"file":"taara9.jpg","displayName":"Shion","tag":"slime"}
     ]
   },
   {
