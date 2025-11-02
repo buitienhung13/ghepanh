@@ -206,7 +206,7 @@ async function drawCanvas(){
     ctx.strokeStyle = "black";
     ctx.strokeText(text, x, y);
 
-    ctx.fillStyle = "#c9bc94";
+    ctx.fillStyle = "#e2d2adff";
     ctx.fillText(text, x, y);
   }
 
