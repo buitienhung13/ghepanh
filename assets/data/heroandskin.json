@@ -260,6 +260,25 @@
     ]
   },
   {
+    "name": "Capheny",
+    "skins": [
+      {"file":"capheny.jpg","displayName":"","tag":""},
+      {"file":"capheny2.jpg","displayName":"Hầu gái","tag":"a"},
+      {"file":"capheny3.jpg","displayName":"Thần tượng âm nhạc","tag":"schh"},
+      {"file":"capheny4.jpg","displayName":"Kimono","tag":"ss"},
+      {"file":"capheny5.jpg","displayName":"Toán Hóa Sinh","tag":"schh"},
+      {"file":"capheny6.jpg","displayName":"Phi hành gia","tag":"schh"},
+      {"file":"capheny7.jpg","displayName":"Tử đinh hương","tag":"mystic"},
+      {"file":"capheny8.jpg","displayName":"Quân Nhạc Mildar","tag":"sc"},
+      {"file":"capheny9.jpg","displayName":"Harley Quinn","tag":"hq"},
+      {"file":"capheny10.jpg","displayName":"Siêu cấp tin tặc","tag":"schh"},
+      {"file":"capheny11.jpg","displayName":"S-Quang Vinh","tag":"s1th2024"},
+      {"file":"capheny12.jpg","displayName":"Vua trò chơi","tag":"ssm63"},
+      {"file":"capheny13.jpg","displayName":"Càn Nguyên Điện Chủ","tag":"sssat"},
+      {"file":"capheny14.jpg","displayName":"Bugcag Assemble","tag":"bugcat"}
+    ]
+  },
+  {
     "name": "Elsu",
     "skins": [
       {"file":"elsu-xtmg.jpg","displayName":"Xạ thần mộng giới","tag":"9lq"},
@@ -307,6 +326,19 @@
     ]
   },
   {
+    "name": "Murad",
+    "skins": [
+      {"file":"murad.jpg","displayName":"","tag":""},
+      {"file":"murad3.jpg","displayName":"M-TP Thần Tượng Học Đường","tag":"s"},
+      {"file":"murad10.jpg","displayName":"Chí tôn thần kiếm","tag":"sshh"},
+      {"file":"murad11.jpg","displayName":"Dược Sĩ Tình yêu","tag":"schh"},
+      {"file":"murad12.jpg","displayName":"Byakuya Kuchiki","tag":"bleach"},
+      {"file":"murad13.jpg","displayName":"Zenitsu Agatsuma","tag":"ds"},
+      {"file":"murad17.jpg","displayName":"Tuyệt thế thần binh","tag":"ssshh"},
+      {"file":"murad19.jpg","displayName":"Thiên Luân Kiếm Thánh","tag":"ssschh"}
+    ]
+  },
+  {
     "name": "Nakroth",
     "skins": [
       {"file":"nakroth.jpg","displayName":"","tag":""},
@@ -329,6 +361,55 @@
     "skins": [
       {"file":"taara.jpg","displayName":"","tag":""},
       {"file":"taara9.jpg","displayName":"Shion","tag":"slime"}
+    ]
+  },
+  {
+    "name": "Tel'Annas",
+    "skins": [
+      {"file":"telannas.jpg","displayName":"","tag":""},
+      {"file":"telannas6.jpg","displayName":"Thần sứ F.E.E-X1","tag":"ssshh"},
+      {"file":"telannas7.jpg","displayName":"Dạ hội","tag":"ahh"},
+      {"file":"telannas9.jpg","displayName":"Thứ nguyên vệ thần","tag":"db2"},
+      {"file":"telannas11.jpg","displayName":"Vũ khúc yêu hồ","tag":"ss"},
+      {"file":"telannas12.jpg","displayName":"Thiên Vũ Thần Long","tag":"ss"},
+      {"file":"telannas15.jpg","displayName":"Tân niên vệ thần","tag":"ssshh"},
+      {"file":"telannas16.jpg","displayName":"Jujutsu Sorcerer","tag":"gojo"},
+      {"file":"telannas17.jpg","displayName":"Lân Quang Thánh Điệu","tag":"ssshh"},
+      {"file":"telannas18.jpg","displayName":"Kỷ Nguyên Hổ Phách","tag":"schhp"}
+    ]
+  },
+  {
+    "name": "Tulen",
+    "skins": [
+      {"file":"tulen.jpg","displayName":"","tag":""},
+      {"file":"tulen5.jpg","displayName":"Đông êm đềm","tag":"christmas"},
+      {"file":"tulen6.jpg","displayName":"Phó kỷ luật","tag":"ahh"},
+      {"file":"tulen7.jpg","displayName":"Tân thần hoàng kim","tag":"ssts"},
+      {"file":"tulen8.jpg","displayName":"Chí tôn kiếm tiên","tag":"ssshh"},
+      {"file":"tulen9.jpg","displayName":"Dạ hội","tag":"ahh"},
+      {"file":"tulen10.jpg","displayName":"Thần sứ ST.L-79","tag":"ssshh"},
+      {"file":"tulen12.jpg","displayName":"Tiêu Dao Vũ Thần","tag":"ss"},
+      {"file":"tulen13.jpg","displayName":"Tân niên vệ thần","tag":"ss"},
+      {"file":"tulen15.jpg","displayName":"Satoru Gojo","tag":"gojo"},
+      {"file":"tulen16.jpg","displayName":"Giám thị sấm sét","tag":"ms"}
+    ]
+  },
+  {
+    "name": "Triệu Vân",
+    "skins": [
+      {"file":"trieuvan.jpg","displayName":"","tag":""},
+      {"file":"trieuvan7.jpg","displayName":"Kỵ sĩ tận thế","tag":"sshh"},
+      {"file":"trieuvan10.jpg","displayName":"Minh Chung Long Đế","tag":"ssshh"}
+    ]
+  },
+  {
+    "name": "Yue",
+    "skins": [
+      {"file":"yue.jpg","displayName":"","tag":""},
+      {"file":"yue2.jpg","displayName":"Tiểu công Chúa","tag":"a"},
+      {"file":"yue3.jpg","displayName":"Chiêm Tinh gia","tag":"sc"},
+      {"file":"yue4.jpg","displayName":"Vũ phiến hỏa diệm","tag":"schh"},
+      {"file":"yue5.jpg","displayName":"Nữ hoàng Băng giá","tag":"ssm72"}
     ]
   },
   {
