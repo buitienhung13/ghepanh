@@ -168,7 +168,7 @@ async function drawCanvas(){
     ctx.textBaseline = "middle";
 
     do {
-        ctx.font = `${fontSize}px Arial`;
+        ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
         var textWidth = ctx.measureText(text).width;
         if (textWidth > 600) fontSize -= 1;
         else break;
@@ -193,7 +193,7 @@ async function drawCanvas(){
     ctx.textBaseline = "middle";
 
     do {
-        ctx.font = `${fontSize}px Arial`;
+        ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
         var textWidth = ctx.measureText(text).width;
         if (textWidth > 630) fontSize -= 1;
         else break;
@@ -211,10 +211,10 @@ async function drawCanvas(){
   }
 
   // Layer 10: Tên game
-  ctx.font = "68px Arial";
+  ctx.font = `68px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillStyle = vienvangCheck.checked ? "#ffeab6ff" : "#ffffff";
+  ctx.fillStyle = vienvangCheck.checked ? "#ffe092ff" : "#ffffff";
   ctx.fillText(nameGame, canvas.width / 2, canvas.height - 230);
 }
 
