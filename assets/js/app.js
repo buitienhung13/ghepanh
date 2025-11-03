@@ -121,11 +121,33 @@ async function drawCanvas(){
     drawImageCover(ctx, imgHero, newX, newY, newWidth, newHeight);
   }
 
-  // Layer 2: Khung
+  // Layer 2: Khung nền cố định (vẽ ngay sau hero)
+const imgKhungNen = await new Promise((resolve) => {
+  const img = new Image();
+  img.src = "assets/logo-images/khungnen.png";
+  img.onload = () => resolve(img);
+  img.onerror = () => resolve(null);
+});
+
+if (imgKhungNen) {
+  ctx.drawImage(imgKhungNen, 0, 0, canvas.width, canvas.height);
+}
+
+// Layer 3: Viền vàng
+if (vien) {
+  const imgVien = await loadImage(vien);
+  const newWidth = canvas.width * 0.84;
+  const newHeight = canvas.height * 0.84;
+  const newX = (canvas.width - newWidth) / 2;
+  const newY = 460;
+  drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
+}
+
+  // Layer 4: Khung
   const imgKhung = await loadImage("khung/" + khung);
   drawImageCover(ctx, imgKhung, 0,0, canvas.width, canvas.height);
 
-  // Layer 3: Tag
+  // Layer 5: Tag
   if (skin && skin.tag) {
     const imgTag = await loadImage("tag/" + skin.tag + ".png");
     if (imgTag) {
@@ -138,29 +160,19 @@ async function drawCanvas(){
     }
   }
 
-  // Layer 4: Thông thạo
+  // Layer 6: Thông thạo
   const imgThongthao = await loadImage("thongthao/" + thongthao);
   drawImageCover(ctx, imgThongthao, 50,40,240,240);
 
-  // Layer 5: Phép bổ trợ
+  // Layer 7: Phép bổ trợ
   const imgPhep = await loadImage("phepbotro/" + phep);
-  drawImageCover(ctx, imgPhep, (canvas.width - 137) / 2, canvas.height - 167, 137, 137);
+  drawImageCover(ctx, imgPhep, (canvas.width - 135) / 2, canvas.height - 170, 138, 138);
   
-  // Layer 6: Tri kỉ
+  // Layer 8: Tri kỉ
   const imgTriki = await loadImage("triki/" + triki);
   drawImageCover(ctx, imgTriki, 165, canvas.height - 185, 150, 150);
 
-  // Layer 7: Viền vàng
-  if(vien){
-    const imgVien = await loadImage(vien);
-    const newWidth = canvas.width * 0.8;
-    const newHeight = canvas.height * 0.8;
-    const newX = (canvas.width - newWidth) / 2;
-    const newY = 486;
-    drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
-  }
-
-  // Layer 8: Tên tướng
+  // Layer 9: Tên tướng
   if(hero){
     let text = hero.name;
     let fontSize = 75;
@@ -185,7 +197,7 @@ async function drawCanvas(){
     ctx.fillText(text, x, y);
   }
   
-  // Layer 9: Tên skin
+  // Layer 10: Tên skin
   if(skin && skin.displayName){
     let text = skin.displayName;
     let fontSize = 75;
@@ -206,16 +218,16 @@ async function drawCanvas(){
     ctx.strokeStyle = "black";
     ctx.strokeText(text, x, y);
 
-    ctx.fillStyle = "#e2d2adff";
+    ctx.fillStyle = "#ead39eff";
     ctx.fillText(text, x, y);
   }
 
-  // Layer 10: Tên game
+  // Layer 11: Tên game
   ctx.font = `68px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
   ctx.fillStyle = vienvangCheck.checked ? "#ffe092ff" : "#ffffff";
-  ctx.fillText(nameGame, canvas.width / 2, canvas.height - 230);
+  ctx.fillText(nameGame, canvas.width / 2, canvas.height - 234);
 }
 
 // ==================
