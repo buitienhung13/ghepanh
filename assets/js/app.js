@@ -214,7 +214,7 @@ async function drawCanvas(){
   ctx.font = "68px Arial";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillStyle = vienvangCheck.checked ? "#e2d2adff" : "#ffffff";
+  ctx.fillStyle = vienvangCheck.checked ? "#ffeab6ff" : "#ffffff";
   ctx.fillText(nameGame, canvas.width / 2, canvas.height - 230);
 }
 
