@@ -37,10 +37,10 @@
   ],
   "lam": [
     { "file": "lamluc1.png", "displayName": "Luyện kim lục" },
-    { "file": "lamvang1.png", "displayName": "Luyện kim vàng" },
-    { "file": "lamlam1.png", "displayName": "Luyện kim lam" },
+    { "file": "lamvang1.png", "displayName": "Luyện kim Vàng" },
+    { "file": "lamdo1.png", "displayName": "Luyện kim Đỏ" },
     { "file": "lamluc2.png", "displayName": "Chuyển sinh lục" },
-    { "file": "lamvang2.png", "displayName": "Chuyển sinh vàng" },
-    { "file": "lamlam2.png", "displayName": "Chuyển sinh lam" }
+    { "file": "lamvang2.png", "displayName": "Chuyển sinh Vàng" },
+    { "file": "lamdo2.png", "displayName": "Chuyển sinh Đỏ" }
   ]
 }
