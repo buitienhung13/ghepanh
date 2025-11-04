@@ -19,7 +19,7 @@
 <body>
   <!-- 🌀 Loader -->
     <div class="loader-container">
-      <div class="loader">
+      <div class="loader"> 
         <div class="loader--dot"></div>
         <div class="loader--dot"></div>
         <div class="loader--dot"></div>
@@ -84,6 +84,20 @@
       <select id="trikiSelect"></select>
     </label>
 
+    <label>Chọn phù hiệu chính:
+  <select id="phuhieuGroupSelect">
+    <option value="khong">Không</option>
+    <option value="luc">Phù hiệu Lục</option>
+    <option value="vang">Phù hiệu Vàng</option>
+    <option value="do">Phù hiệu Đỏ</option>
+    <option value="lam">Phù hiệu Lam</option>
+  </select>
+</label>
+
+<label id="phuhieuLabel" style="display: none;">Chọn phù hiệu:
+  <select id="phuhieuSelect"></select>
+</label>
+
     <div class="switch-label">
   <span>Viền tên vàng</span>
 
@@ -107,7 +121,7 @@
     <!-- Canvas đặt ngay dưới các nút -->
     <canvas id="preview" width="900" height="1200" style="display:none;"></canvas>
 
-    <h3 style="color:#00ddff;">Lưu ý: Mở bằng trình duyệt bên ngoài mới lưu ảnh được nha.</h3>
+     <h3 style="color:#00ddff;">Lưu ý: Mở bằng trình duyệt bên ngoài mới lưu ảnh được nha.</h3>
 
     <!-- Nút lưu ảnh, ẩn trước -->
     <button id="saveBtn" style="display:none;">💾 Lưu hình</button>
