@@ -1,0 +1,67 @@
+/* Footer chung */
+.site-footer {
+  color: #fff;
+  padding: 30px 20px;
+  border-top: 2px solid #00ddff;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+}
+
+/* Container 2 cột */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* không cho xuống hàng */
+}
+
+
+/* Cột trái */
+.footer-left {
+  flex: 1 1 45%; /* chiếm khoảng 45% width */
+  margin-bottom: 20px;
+}
+
+.footer-left h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.footer-left p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Cột phải */
+.footer-right {
+  flex: 1 1 45%; /* chiếm khoảng 45% width */
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.footer-right h3 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.footer-right a {
+  color: #00ddff;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: màn hình nhỏ */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
