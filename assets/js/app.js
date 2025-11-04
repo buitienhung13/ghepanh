@@ -8,6 +8,8 @@ const khungSelect = document.getElementById("khungSelect");
 const phepSelect = document.getElementById("phepSelect");
 const thongthaoSelect = document.getElementById("thongthaoSelect");
 const trikiSelect = document.getElementById("trikiSelect");
+const phuhieuGroupSelect = document.getElementById("phuhieuGroupSelect");
+const phuhieuSelect = document.getElementById("phuhieuSelect");
 const vienvangCheck = document.getElementById("vienvangCheck");
 const tenGameInput = document.getElementById("tenGameInput");
 const saveBtn = document.getElementById("saveBtn");
@@ -36,6 +38,7 @@ async function loadAllData() {
   pheps = await loadJSON("assets/data/phepbotro.json");
   thongthaos = await loadJSON("assets/data/thongthao.json");
   trikis = await loadJSON("assets/data/triki.json");
+  phuhieus = await loadJSON("assets/data/phuhieu.json");
   
   populateSelect(tuongSelect, heroes, true);
   populateSelect(khungSelect, khungs);
@@ -95,7 +98,16 @@ function drawImageCover(ctx, img, x, y, w, h){
   const iy = y + (h - ih)/2;
   ctx.drawImage(img, ix, iy, iw, ih);
 }
-
+function updatePhuhieuList(groupKey) {
+  const groupData = phuhieus[groupKey] || [];
+  phuhieuSelect.innerHTML = "";
+  groupData.forEach(item => {
+    const option = document.createElement("option");
+    option.value = item.file;
+    option.textContent = item.displayName;
+    phuhieuSelect.appendChild(option);
+  });
+}
 // ==================
 // Draw canvas
 // ==================
@@ -166,11 +178,19 @@ if (vien) {
 
   // Layer 7: Phép bổ trợ
   const imgPhep = await loadImage("phepbotro/" + phep);
-  drawImageCover(ctx, imgPhep, (canvas.width - 135) / 2, canvas.height - 170, 138, 138);
+  drawImageCover(ctx, imgPhep, (canvas.width - 127) / 2, canvas.height - 162, 130, 130);
   
   // Layer 8: Tri kỉ
   const imgTriki = await loadImage("triki/" + triki);
   drawImageCover(ctx, imgTriki, 165, canvas.height - 185, 150, 150);
+
+  // Layer 8,5: Phù hiệu
+const groupKey = phuhieuGroupSelect.value;
+const phuhieuFile = phuhieuSelect.value;
+if (phuhieuFile) {
+  const imgPhuhieu = await loadImage("phuhieu/" + phuhieuFile);
+  drawImageCover(ctx, imgPhuhieu, canvas.width - 330, 1020, 160, 160);
+}
 
   // Layer 9: Tên tướng
   if(hero){
@@ -277,3 +297,16 @@ saveBtn.addEventListener("click", ()=>{
 // Init
 // ==================
 loadAllData();
+// Khi chọn "Phù hiệu chính"
+phuhieuGroupSelect.addEventListener("change", (e) => {
+  const value = e.target.value;
+
+  if (value && value !== "none") {
+    // Nếu có chọn phù hiệu chính thì hiện ra phần chọn phù hiệu
+    phuhieuLabel.style.display = "inline-block";
+    updatePhuhieuList(value);
+  } else {
+    // Nếu chưa chọn thì ẩn phần chọn phù hiệu
+    phuhieuLabel.style.display = "none";
+  }
+});
