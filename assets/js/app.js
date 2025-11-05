@@ -178,7 +178,7 @@ async function drawCanvas(){
 
   // Layer 7: Phép bổ trợ
   const imgPhep = await loadImage("phepbotro/" + phep);
-  drawImageCover(ctx, imgPhep, (canvas.width - 127) / 2, canvas.height - 162, 130, 130);
+  drawImageCover(ctx, imgPhep, (canvas.width - 128) / 2, canvas.height - 166, 132, 132);
   
   // Layer 8: Tri kỉ
   const imgTriki = await loadImage("triki/" + triki);
