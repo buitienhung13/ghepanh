@@ -279,6 +279,38 @@
     ]
   },
   {
+    "name": "Dolia",
+    "skins": [
+      {"file":"dolia.jpg","displayName":"","tag":""},
+      {"file":"dolia2.jpg","displayName":"Hoa tiêu đại dương","tag":"sc"},
+      {"file":"dolia3.jpg","displayName":"Môn đồ tập sự","tag":"ahh"}
+    ]
+  },
+  {
+    "name": "Điêu Thuyền",
+    "skins": [
+      {"file":"dieuthuyen.jpg","displayName":"","tag":""},
+      {"file":"dieuthuyen3.jpg","displayName":"Hoa Hậu","tag":"s"},
+      {"file":"dieuthuyen4.jpg","displayName":"Tiệc bãi biển","tag":"ss"},
+      {"file":"dieuthuyen6.jpg","displayName":"Phù thủy bí ngô","tag":"halloweengh"},
+      {"file":"dieuthuyen7.jpg","displayName":"Tà linh pháp trượng","tag":"sc"},
+      {"file":"dieuthuyen8.jpg","displayName":"Mèo công nghệ","tag":"scdb"},
+      {"file":"dieuthuyen9.jpg","displayName":"Thất Tịch Tiên Tử","tag":"ss"},
+      {"file":"dieuthuyen10.jpg","displayName":"Thần Ngọc","tag":"sc"},
+      {"file":"dieuthuyen11.jpg","displayName":"Nữ y tá","tag":"ahh"},
+      {"file":"dieuthuyen12.jpg","displayName":"WaVe","tag":"wave3"},
+      {"file":"dieuthuyen13.jpg","displayName":"Eternal Sailor Moon","tag":"sc"},
+      {"file":"dieuthuyen14.jpg","displayName":"Mối tình đầu","tag":"ahh"},
+      {"file":"dieuthuyen15.jpg","displayName":"Tuế Hàn Đỗ Quyên","tag":"ss"}
+    ]
+  },
+  {
+    "name": "Edras",
+    "skins": [
+      {"file":"edras.jpg","displayName":"","tag":""}
+    ]
+  },
+  {
     "name": "Elsu",
     "skins": [
       {"file":"elsu-xtmg.jpg","displayName":"Xạ thần mộng giới","tag":"9lq"},
@@ -313,6 +345,30 @@
     ]
   },
   {
+    "name": "Ishar",
+    "skins": [
+      {"file":"ishar.jpg","displayName":"","tag":""},
+      {"file":"ishar2.jpg","displayName":"Giấc Mơ Ngọt Ngào","tag":"a"},
+      {"file":"ishar3.jpg","displayName":"Tiểu thư kẹo ngọt","tag":"s"},
+      {"file":"ishar4.jpg","displayName":"Tiểu thư gấu trúc","tag":"ahh"},
+      {"file":"ishar5.jpg","displayName":"Quận chúa sông Nile","tag":"ahh"},
+      {"file":"ishar6.jpg","displayName":"Rồng bé bự","tag":"schh"},
+      {"file":"ishar7.jpg","displayName":"Gián điệp hacker","tag":"schh"},
+      {"file":"ishar8.jpg","displayName":"Lễ hội ma quái","tag":"ahh"},
+      {"file":"ishar9.jpg","displayName":"Tiểu thư","tag":"ahh"},
+      {"file":"ishar10.jpg","displayName":"Capoo Boom","tag":"bugcat"}
+    ]
+  },
+  {
+    "name": "Kaine",
+    "skins": [
+      {"file":"kaine.jpg","displayName":"","tag":""},
+      {"file":"kaine5.jpg","displayName":"Chiến Binh Kim Quang","tag":"ms"},
+      {"file":"kaine6.jpg","displayName":"Thiếu chủ bóng đêm","tag":"s"},
+      {"file":"kaine7.jpg","displayName":"Thợ săn chính nghĩa","tag":"scaov2025"}
+    ]
+  },
+  {
     "name": "Krixi",
     "skins": [
       {"file":"krixi-pttk.jpg","displayName":"Phù thủy thời không","tag":"ssschh"}
@@ -323,6 +379,18 @@
     "skins": [
       {"file":"liliana-wave1.jpg","displayName":"WaVe","tag":"wave1"},
       {"file":"liliana-mptt.jpg","displayName":"Ma Pháp Tối Thượng","tag":"th8lq1"}
+    ]
+  },
+  {
+    "name": "Lữ Bố",
+    "skins": [
+      {"file":"lubo.jpg","displayName":"","tag":""},
+      {"file":"lubo5.jpg","displayName":"Tiệc Bãi Biển","tag":"ss"},
+      {"file":"lubo6.jpg","displayName":"Nam Vương","tag":"s"},
+      {"file":"lubo8.jpg","displayName":"Vũ điệu Samba","tag":"shh"},
+      {"file":"lubo9.jpg","displayName":"Thần Ngọc","tag":"sc"},
+      {"file":"lubo10.jpg","displayName":"Ichigo Kurosaki","tag":"bleach"},
+      {"file":"lubo11.jpg","displayName":"Cửu Thiên Lôi Thần","tag":"sshh"}
     ]
   },
   {
@@ -350,10 +418,49 @@
     ]
   },
   {
+    "name": "Sinestrea",
+    "skins": [
+      {"file":"sinestrea.jpg","displayName":"","tag":""},
+      {"file":"sinestrea3.jpg","displayName":"Tiểu thư băng giá","tag":"schh"},
+      {"file":"sinestrea4.jpg","displayName":"WaVe","tag":"wave2"},
+      {"file":"sinestrea5.jpg","displayName":"Đại tiểu thư","tag":"ahh"},
+      {"file":"sinestrea6.jpg","displayName":"Lữ khách sa mạc","tag":"ahh"},
+      {"file":"sinestrea7.jpg","displayName":"Giấc mộng biển xanh","tag":"ssm64"},
+      {"file":"sinestrea8.jpg","displayName":"Điệp viên cánh cụt","tag":"schh"},
+      {"file":"sinestrea9.jpg","displayName":"S-Quang vinh","tag":"s4th2024"},
+      {"file":"sinestrea10.jpg","displayName":"Nữ quỷ say ngủ","tag":"ssm80"}
+    ]
+  },
+  {
+    "name": "Stuart",
+    "skins": [
+      {"file":"stuart.jpg","displayName":"","tag":""},
+      {"file":"stuart5.jpg","displayName":"Đạo tặc tử quang","tag":"ms"},
+      {"file":"stuart6.jpg","displayName":"Đêm kinh hoàng","tag":"s"},
+      {"file":"stuart7.jpg","displayName":"Dạ Xoa thiếu chủ","tag":"schhp"},
+      {"file":"stuart8.jpg","displayName":"Siêu trùm phản diện","tag":"ssaovday2025"}
+    ]
+  },
+  {
     "name": "Qi",
     "skins": [
       {"file":"qi.jpg","displayName":"","tag":""},
       {"file":"qi9.jpg","displayName":"Milim Nava","tag":"slime"}
+    ]
+  },
+  {
+    "name": "Rouie",
+    "skins": [
+      {"file":"rouie.jpg","displayName":"","tag":""},
+      {"file":"rouie2.jpg","displayName":"Sứ giả vũ trụ","tag":"a"},
+      {"file":"rouie3.jpg","displayName":"Quang Vinh","tag":"s24th"},
+      {"file":"rouie4.jpg","displayName":"Sứ giả quang minh","tag":"ahh"},
+      {"file":"rouie5.jpg","displayName":"Vẹt cầu vồng","tag":"ahh"},
+      {"file":"rouie6.jpg","displayName":"Tuần lộc đáng yêu","tag":"ahh"},
+      {"file":"rouie7.jpg","displayName":"Công chúa hỏa long","tag":"schh"},
+      {"file":"rouie8.jpg","displayName":"Thụy mộc Thanh Long","tag":"scgt"},
+      {"file":"rouie9.jpg","displayName":"Mèo hầu gái","tag":"ahh"},
+      {"file":"rouie10.jpg","displayName":"Linh Sứ Thời không","tag":"ssp"}
     ]
   },
   {
@@ -400,6 +507,20 @@
       {"file":"trieuvan.jpg","displayName":"","tag":""},
       {"file":"trieuvan7.jpg","displayName":"Kỵ sĩ tận thế","tag":"sshh"},
       {"file":"trieuvan10.jpg","displayName":"Minh Chung Long Đế","tag":"ssshh"}
+    ]
+  },
+  {
+    "name": "Valhein",
+    "skins": [
+      {"file":"valhein.jpg","displayName":"","tag":""},
+      {"file":"valhein9.jpg","displayName":"Đệ nhất thần thám","tag":"ss"},
+      {"file":"valhein14.jpg","displayName":"Thứ nguyên vệ thần","tag":"db6"},
+      {"file":"valhein13.jpg","displayName":"Hoàng tử Băng","tag":"sc"},
+      {"file":"valhein11a.jpg","displayName":"Xạ thần Kagutsuchi","tag":"evo1"},
+      {"file":"valhein11b.jpg","displayName":"Xạ thần Kagutsuchi","tag":"evo2"},
+      {"file":"valhein11c.jpg","displayName":"Xạ thần Kagutsuchi","tag":"evo3"},
+      {"file":"valhein11d.jpg","displayName":"Xạ thần Kagutsuchi","tag":"evo4"},
+      {"file":"valhein11e.jpg","displayName":"Xạ thần Kagutsuchi","tag":"evo5"}
     ]
   },
   {
