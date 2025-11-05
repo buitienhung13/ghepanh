@@ -8,8 +8,6 @@ const khungSelect = document.getElementById("khungSelect");
 const phepSelect = document.getElementById("phepSelect");
 const thongthaoSelect = document.getElementById("thongthaoSelect");
 const trikiSelect = document.getElementById("trikiSelect");
-const phuhieuGroupSelect = document.getElementById("phuhieuGroupSelect");
-const phuhieuSelect = document.getElementById("phuhieuSelect");
 const vienvangCheck = document.getElementById("vienvangCheck");
 const tenGameInput = document.getElementById("tenGameInput");
 const saveBtn = document.getElementById("saveBtn");
@@ -38,7 +36,6 @@ async function loadAllData() {
   pheps = await loadJSON("assets/data/phepbotro.json");
   thongthaos = await loadJSON("assets/data/thongthao.json");
   trikis = await loadJSON("assets/data/triki.json");
-  phuhieus = await loadJSON("assets/data/phuhieu.json");
   
   populateSelect(tuongSelect, heroes, true);
   populateSelect(khungSelect, khungs);
@@ -99,17 +96,6 @@ function drawImageCover(ctx, img, x, y, w, h){
   ctx.drawImage(img, ix, iy, iw, ih);
 }
 
-function updatePhuhieuList(groupKey) {
-  const groupData = phuhieus[groupKey] || [];
-  phuhieuSelect.innerHTML = "";
-  groupData.forEach(item => {
-    const option = document.createElement("option");
-    option.value = item.file;
-    option.textContent = item.displayName;
-    phuhieuSelect.appendChild(option);
-  });
-}
-
 // ==================
 // Draw canvas
 // ==================
@@ -135,31 +121,11 @@ async function drawCanvas(){
     drawImageCover(ctx, imgHero, newX, newY, newWidth, newHeight);
   }
 
-  // Layer 2: Khung nền
-  const imgKhungNen = await new Promise((resolve) => {
-    const img = new Image();
-    img.src = "assets/logo-images/khungnen.png";
-    img.onload = () => resolve(img);
-    img.onerror = () => resolve(null);
-  });
-
-  if (imgKhungNen) ctx.drawImage(imgKhungNen, 0, 0, canvas.width, canvas.height);
-
-  // Layer 3: Viền vàng
-  if (vien) {
-    const imgVien = await loadImage(vien);
-    const newWidth = canvas.width * 0.84;
-    const newHeight = canvas.height * 0.84;
-    const newX = (canvas.width - newWidth) / 2;
-    const newY = 460;
-    drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
-  }
-
-  // Layer 4: Khung
+  // Layer 2: Khung
   const imgKhung = await loadImage("khung/" + khung);
   drawImageCover(ctx, imgKhung, 0,0, canvas.width, canvas.height);
 
-  // Layer 5: Tag
+  // Layer 3: Tag
   if (skin && skin.tag) {
     const imgTag = await loadImage("tag/" + skin.tag + ".png");
     if (imgTag) {
@@ -172,27 +138,29 @@ async function drawCanvas(){
     }
   }
 
-  // Layer 6: Thông thạo
+  // Layer 4: Thông thạo
   const imgThongthao = await loadImage("thongthao/" + thongthao);
   drawImageCover(ctx, imgThongthao, 50,40,240,240);
 
-  // Layer 7: Phép bổ trợ
+  // Layer 5: Phép bổ trợ
   const imgPhep = await loadImage("phepbotro/" + phep);
-  drawImageCover(ctx, imgPhep, (canvas.width - 128) / 2, canvas.height - 166, 132, 132);
+  drawImageCover(ctx, imgPhep, (canvas.width - 137) / 2, canvas.height - 167, 137, 137);
   
-  // Layer 8: Tri kỉ
+  // Layer 6: Tri kỉ
   const imgTriki = await loadImage("triki/" + triki);
   drawImageCover(ctx, imgTriki, 165, canvas.height - 185, 150, 150);
 
-  // Layer 8.5: Phù hiệu
-  const groupKey = phuhieuGroupSelect.value;
-  const phuhieuFile = phuhieuSelect.value;
-  if (phuhieuFile) {
-    const imgPhuhieu = await loadImage("phuhieu/" + phuhieuFile);
-    drawImageCover(ctx, imgPhuhieu, canvas.width - 330, 1020, 160, 160);
+  // Layer 7: Viền vàng
+  if(vien){
+    const imgVien = await loadImage(vien);
+    const newWidth = canvas.width * 0.8;
+    const newHeight = canvas.height * 0.8;
+    const newX = (canvas.width - newWidth) / 2;
+    const newY = 486;
+    drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
   }
 
-  // Layer 9: Tên tướng
+  // Layer 8: Tên tướng
   if(hero){
     let text = hero.name;
     let fontSize = 75;
@@ -200,10 +168,10 @@ async function drawCanvas(){
     ctx.textBaseline = "middle";
 
     do {
-      ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
-      var textWidth = ctx.measureText(text).width;
-      if (textWidth > 600) fontSize -= 1;
-      else break;
+        ctx.font = `${fontSize}px Arial`;
+        var textWidth = ctx.measureText(text).width;
+        if (textWidth > 600) fontSize -= 1;
+        else break;
     } while(fontSize > 10);
 
     const x = canvas.width / 2;
@@ -217,7 +185,7 @@ async function drawCanvas(){
     ctx.fillText(text, x, y);
   }
   
-  // Layer 10: Tên skin
+  // Layer 9: Tên skin
   if(skin && skin.displayName){
     let text = skin.displayName;
     let fontSize = 75;
@@ -225,10 +193,10 @@ async function drawCanvas(){
     ctx.textBaseline = "middle";
 
     do {
-      ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
-      var textWidth = ctx.measureText(text).width;
-      if (textWidth > 630) fontSize -= 1;
-      else break;
+        ctx.font = `${fontSize}px Arial`;
+        var textWidth = ctx.measureText(text).width;
+        if (textWidth > 630) fontSize -= 1;
+        else break;
     } while(fontSize > 10);
 
     const x = canvas.width / 2;
@@ -238,16 +206,16 @@ async function drawCanvas(){
     ctx.strokeStyle = "black";
     ctx.strokeText(text, x, y);
 
-    ctx.fillStyle = "#ead39eff";
+    ctx.fillStyle = "#c9bc94";
     ctx.fillText(text, x, y);
   }
 
-  // Layer 11: Tên game
-  ctx.font = `68px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
+  // Layer 10: Tên game
+  ctx.font = "68px Arial";
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillStyle = vienvangCheck.checked ? "#ffe092ff" : "#ffffff";
-  ctx.fillText(nameGame, canvas.width / 2, canvas.height - 234);
+  ctx.fillStyle = vienvangCheck.checked ? "#d7c8a5ff" : "#ffffff";
+  ctx.fillText(nameGame, canvas.width / 2, canvas.height - 230);
 }
 
 // ==================
@@ -257,6 +225,7 @@ tuongSelect.addEventListener("change", () => {
   const hero = getSelectedHero();
   if (!hero || !hero.skins) return;
   populateSelect(skinSelect, hero.skins);
+  // chọn skin đầu tiên luôn
   skinSelect.selectedIndex = 0;
 });
 
@@ -264,41 +233,21 @@ tuongSelect.addEventListener("change", () => {
 // Nút "Tạo ảnh"
 // ==================
 createBtn.addEventListener("click", async () => {
+  // Vô hiệu hóa nút và đổi chữ
   createBtn.disabled = true;
   createBtn.textContent = "⏳ Đang tạo ảnh...";
 
+  // Vẽ canvas
   await drawCanvas();
 
-  const imgData = canvas.toDataURL("image/png");
-
-  const oldImg = document.getElementById("imgPreview");
-  if (oldImg) oldImg.remove();
-
-  const imgPreview = document.createElement("img");
-  imgPreview.id = "imgPreview";
-  imgPreview.src = imgData;
-  imgPreview.alt = "Ảnh đã tạo";
-  imgPreview.style.width = "100%";
-  imgPreview.style.maxWidth = "600px";
-  imgPreview.style.display = "block";
-  imgPreview.style.margin = "40px auto";
-  imgPreview.style.borderRadius = "12px";
-  imgPreview.style.boxShadow = "0 4px 20px rgba(0,0,0,0.3)";
-  imgPreview.style.userSelect = "none";
-  imgPreview.style.webkitUserSelect = "none";
-
-  // 🐧 CHỈNH Ở ĐÂY: chèn ảnh vào giữa 2 nút
-  saveBtn.parentNode.insertBefore(imgPreview, saveBtn);
-
-  canvas.style.display = "none";
+  // Hiển thị canvas và nút lưu
+  canvas.style.display = "block";
   saveBtn.style.display = "inline-block";
-  saveBtn.onclick = () => {
-    const link = document.createElement("a");
-    link.download = "skin_preview.png";
-    link.href = imgData;
-    link.click();
-  };
 
+  // Cuộn xuống canvas
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+
+  // Bật lại nút và trả chữ về
   createBtn.disabled = false;
   createBtn.textContent = "✨ Tạo ảnh";
 });
@@ -312,42 +261,7 @@ saveBtn.addEventListener("click", ()=>{
   link.href = canvas.toDataURL("image/png");
   link.click();
 });
-
 // ==================
 // Init
 // ==================
 loadAllData();
-
-phuhieuGroupSelect.addEventListener("change", (e) => {
-  const value = e.target.value;
-  if (value && value !== "none") {
-    phuhieuLabel.style.display = "inline-block";
-    updatePhuhieuList(value);
-  } else {
-    phuhieuLabel.style.display = "none";
-  }
-});
-document.getElementById("saveBtn").addEventListener("click", () => {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  const img = document.getElementById("imgPreview");
-
-  // 🐧 Phát hiện nếu mở bằng app (Facebook, Zalo, TikTok)
-  if (/Zalo|FBAN|FBAV|TikTok/i.test(userAgent)) {
-    alert(
-      "⚠️ Bạn đang mở trang bằng ứng dụng (Facebook / Zalo / TikTok,...)\n\n" +
-      "🐧 Hãy bấm vào nút ... hoặc dấu chia sẻ → chọn 'Mở bằng trình duyệt (Safari / Chrome)' để lưu hình nhé!\n\n" +
-      "😍Hoặc Bấm giữ 2s hình ảnh để lưu nhé, trên pc thì click chuột phải chọn lưu hình."
-    );
-    return;
-  }
-
-  // 🐧 Nếu đang ở trình duyệt thật (Safari, Chrome...) → cho phép tải
-  if (img) {
-    const link = document.createElement("a");
-    link.download = "tao-khung-lien-quan.png";
-    link.href = img.src;
-    link.click();
-  } else {
-    alert("🐧 Chưa có ảnh để lưu nha!");
-  }
-});

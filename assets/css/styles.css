@@ -1,3 +1,27 @@
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== BODY & LAYOUT ========== */
+body {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  color: #111;
+  margin: 0;
+  overflow-x: hidden;
+
+  /* Gradient loang toàn giao diện */
+  background: linear-gradient(135deg, #4c65f6 0%, #b57eff 100%);
+}
+
 /* Container giữ nguyên nhưng nền hơi trong suốt để gradient nổi bật */
 .container {
   background: rgba(255, 255, 255, 0.05); /* nền trong suốt nhẹ */
@@ -214,4 +238,35 @@ input:checked + .slider:before {
   50%  { color: #00ccff; }   /* xanh dương nhạt */
   75%  { color: #b57eff; }   /* tím */
   100% { color: #ea0101; }   /* quay lại đỏ */
+}
+/* Căn giữa logo */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Logo có hiệu ứng phồng to - thu nhỏ */
+.logo-pulse {
+  width: 211px;
+  height: 100px;
+  animation: pulse 2.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Hiệu ứng nhịp tim */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
 }
