@@ -98,6 +98,7 @@ function drawImageCover(ctx, img, x, y, w, h){
   const iy = y + (h - ih)/2;
   ctx.drawImage(img, ix, iy, iw, ih);
 }
+
 function updatePhuhieuList(groupKey) {
   const groupData = phuhieus[groupKey] || [];
   phuhieuSelect.innerHTML = "";
@@ -108,6 +109,7 @@ function updatePhuhieuList(groupKey) {
     phuhieuSelect.appendChild(option);
   });
 }
+
 // ==================
 // Draw canvas
 // ==================
@@ -133,27 +135,25 @@ async function drawCanvas(){
     drawImageCover(ctx, imgHero, newX, newY, newWidth, newHeight);
   }
 
-  // Layer 2: Khung nền cố định (vẽ ngay sau hero)
-const imgKhungNen = await new Promise((resolve) => {
-  const img = new Image();
-  img.src = "assets/logo-images/khungnen.png";
-  img.onload = () => resolve(img);
-  img.onerror = () => resolve(null);
-});
+  // Layer 2: Khung nền
+  const imgKhungNen = await new Promise((resolve) => {
+    const img = new Image();
+    img.src = "assets/logo-images/khungnen.png";
+    img.onload = () => resolve(img);
+    img.onerror = () => resolve(null);
+  });
 
-if (imgKhungNen) {
-  ctx.drawImage(imgKhungNen, 0, 0, canvas.width, canvas.height);
-}
+  if (imgKhungNen) ctx.drawImage(imgKhungNen, 0, 0, canvas.width, canvas.height);
 
-// Layer 3: Viền vàng
-if (vien) {
-  const imgVien = await loadImage(vien);
-  const newWidth = canvas.width * 0.84;
-  const newHeight = canvas.height * 0.84;
-  const newX = (canvas.width - newWidth) / 2;
-  const newY = 460;
-  drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
-}
+  // Layer 3: Viền vàng
+  if (vien) {
+    const imgVien = await loadImage(vien);
+    const newWidth = canvas.width * 0.84;
+    const newHeight = canvas.height * 0.84;
+    const newX = (canvas.width - newWidth) / 2;
+    const newY = 460;
+    drawImageCover(ctx, imgVien, newX, newY, newWidth, newHeight);
+  }
 
   // Layer 4: Khung
   const imgKhung = await loadImage("khung/" + khung);
@@ -184,13 +184,13 @@ if (vien) {
   const imgTriki = await loadImage("triki/" + triki);
   drawImageCover(ctx, imgTriki, 165, canvas.height - 185, 150, 150);
 
-  // Layer 8,5: Phù hiệu
-const groupKey = phuhieuGroupSelect.value;
-const phuhieuFile = phuhieuSelect.value;
-if (phuhieuFile) {
-  const imgPhuhieu = await loadImage("phuhieu/" + phuhieuFile);
-  drawImageCover(ctx, imgPhuhieu, canvas.width - 330, 1020, 160, 160);
-}
+  // Layer 8.5: Phù hiệu
+  const groupKey = phuhieuGroupSelect.value;
+  const phuhieuFile = phuhieuSelect.value;
+  if (phuhieuFile) {
+    const imgPhuhieu = await loadImage("phuhieu/" + phuhieuFile);
+    drawImageCover(ctx, imgPhuhieu, canvas.width - 330, 1020, 160, 160);
+  }
 
   // Layer 9: Tên tướng
   if(hero){
@@ -200,10 +200,10 @@ if (phuhieuFile) {
     ctx.textBaseline = "middle";
 
     do {
-        ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
-        var textWidth = ctx.measureText(text).width;
-        if (textWidth > 600) fontSize -= 1;
-        else break;
+      ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
+      var textWidth = ctx.measureText(text).width;
+      if (textWidth > 600) fontSize -= 1;
+      else break;
     } while(fontSize > 10);
 
     const x = canvas.width / 2;
@@ -225,10 +225,10 @@ if (phuhieuFile) {
     ctx.textBaseline = "middle";
 
     do {
-        ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
-        var textWidth = ctx.measureText(text).width;
-        if (textWidth > 630) fontSize -= 1;
-        else break;
+      ctx.font = `${fontSize}px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`;
+      var textWidth = ctx.measureText(text).width;
+      if (textWidth > 630) fontSize -= 1;
+      else break;
     } while(fontSize > 10);
 
     const x = canvas.width / 2;
@@ -257,7 +257,6 @@ tuongSelect.addEventListener("change", () => {
   const hero = getSelectedHero();
   if (!hero || !hero.skins) return;
   populateSelect(skinSelect, hero.skins);
-  // chọn skin đầu tiên luôn
   skinSelect.selectedIndex = 0;
 });
 
@@ -265,21 +264,41 @@ tuongSelect.addEventListener("change", () => {
 // Nút "Tạo ảnh"
 // ==================
 createBtn.addEventListener("click", async () => {
-  // Vô hiệu hóa nút và đổi chữ
   createBtn.disabled = true;
   createBtn.textContent = "⏳ Đang tạo ảnh...";
 
-  // Vẽ canvas
   await drawCanvas();
 
-  // Hiển thị canvas và nút lưu
-  canvas.style.display = "block";
+  const imgData = canvas.toDataURL("image/png");
+
+  const oldImg = document.getElementById("imgPreview");
+  if (oldImg) oldImg.remove();
+
+  const imgPreview = document.createElement("img");
+  imgPreview.id = "imgPreview";
+  imgPreview.src = imgData;
+  imgPreview.alt = "Ảnh đã tạo";
+  imgPreview.style.width = "100%";
+  imgPreview.style.maxWidth = "600px";
+  imgPreview.style.display = "block";
+  imgPreview.style.margin = "40px auto";
+  imgPreview.style.borderRadius = "12px";
+  imgPreview.style.boxShadow = "0 4px 20px rgba(0,0,0,0.3)";
+  imgPreview.style.userSelect = "none";
+  imgPreview.style.webkitUserSelect = "none";
+
+  // 🐧 CHỈNH Ở ĐÂY: chèn ảnh vào giữa 2 nút
+  saveBtn.parentNode.insertBefore(imgPreview, saveBtn);
+
+  canvas.style.display = "none";
   saveBtn.style.display = "inline-block";
+  saveBtn.onclick = () => {
+    const link = document.createElement("a");
+    link.download = "skin_preview.png";
+    link.href = imgData;
+    link.click();
+  };
 
-  // Cuộn xuống canvas
-  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-
-  // Bật lại nút và trả chữ về
   createBtn.disabled = false;
   createBtn.textContent = "✨ Tạo ảnh";
 });
@@ -293,20 +312,42 @@ saveBtn.addEventListener("click", ()=>{
   link.href = canvas.toDataURL("image/png");
   link.click();
 });
+
 // ==================
 // Init
 // ==================
 loadAllData();
-// Khi chọn "Phù hiệu chính"
+
 phuhieuGroupSelect.addEventListener("change", (e) => {
   const value = e.target.value;
-
   if (value && value !== "none") {
-    // Nếu có chọn phù hiệu chính thì hiện ra phần chọn phù hiệu
     phuhieuLabel.style.display = "inline-block";
     updatePhuhieuList(value);
   } else {
-    // Nếu chưa chọn thì ẩn phần chọn phù hiệu
     phuhieuLabel.style.display = "none";
+  }
+});
+document.getElementById("saveBtn").addEventListener("click", () => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const img = document.getElementById("imgPreview");
+
+  // 🐧 Phát hiện nếu mở bằng app (Facebook, Zalo, TikTok)
+  if (/Zalo|FBAN|FBAV|TikTok/i.test(userAgent)) {
+    alert(
+      "⚠️ Bạn đang mở trang bằng ứng dụng (Facebook / Zalo / TikTok,...)\n\n" +
+      "🐧 Hãy bấm vào nút ... hoặc dấu chia sẻ → chọn 'Mở bằng trình duyệt (Safari / Chrome)' để lưu hình nhé!\n\n" +
+      "😍Hoặc Bấm giữ 2s hình ảnh để lưu nhé, trên pc thì click chuột phải chọn lưu hình."
+    );
+    return;
+  }
+
+  // 🐧 Nếu đang ở trình duyệt thật (Safari, Chrome...) → cho phép tải
+  if (img) {
+    const link = document.createElement("a");
+    link.download = "tao-khung-lien-quan.png";
+    link.href = img.src;
+    link.click();
+  } else {
+    alert("🐧 Chưa có ảnh để lưu nha!");
   }
 });
