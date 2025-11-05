@@ -1,0 +1,272 @@
+/* ========== RESET ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========== BODY & LAYOUT ========== */
+body {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 20px;
+  color: #111;
+  margin: 0;
+  overflow-x: hidden;
+
+  /* Gradient loang toàn giao diện */
+  background: linear-gradient(135deg, #4c65f6 0%, #b57eff 100%);
+}
+
+/* Container giữ nguyên nhưng nền hơi trong suốt để gradient nổi bật */
+.container {
+  background: rgba(255, 255, 255, 0.05); /* nền trong suốt nhẹ */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px 24px;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Canvas viền trắng nổi trên gradient */
+canvas {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #ffffff88;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 20px;
+}
+
+/* Controls vẫn giữ nguyên style nhưng nền trong suốt để nhìn nổi bật trên gradient */
+.controls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff; /* chữ trắng nổi trên gradient */
+}
+
+select,
+input[type="text"] {
+  margin-top: 5px;
+  padding: 8px 10px;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+select:focus,
+input[type="text"]:focus {
+  border-color: #fff;
+  background: rgba(255,255,255,0.3);
+  outline: none;
+}
+
+/* Button gradient loang */
+button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #b57eff 0%, #4c65f6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.1);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Checkbox chữ trắng */
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+/* Scrollbar giữ nguyên */
+select::-webkit-scrollbar {
+  width: 6px;
+}
+select::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+select::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Responsive giữ nguyên */
+@media (max-width: 500px) {
+  .container {
+    padding: 16px;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Nav giữ nguyên */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #ffd700;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: 2px solid #ffd700;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.2);
+}
+
+.nav a:hover {
+  color: #000;
+  background: #ffd700;
+  box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+  transform: translateY(-2px);
+}
+
+.nav a.active {
+  color: #000;
+  background: #ffcc33;
+  border-color: #ffcc33;
+  box-shadow: 0 6px 15px rgba(255, 204, 51, 0.5);
+}
+/* ==== Switch layout ==== */
+.switch-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* chữ bên trái, công tắc bên phải */
+  width: 100%;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff; /* đổi thành trắng để nổi trên nền gradient */
+  margin-top: 10px;
+}
+/* ==== Switch design ==== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #0066ff; /* vàng khi bật */
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+/* Hiệu ứng đổi màu liên tục */
+.rainbow-text {
+  font-weight: 700;
+  animation: colorchange 3s infinite linear;
+}
+
+@keyframes colorchange {
+  0%   { color: #ea0101; }   /* đỏ */
+  25%  { color: #ff9900; }   /* cam */
+  50%  { color: #00ccff; }   /* xanh dương nhạt */
+  75%  { color: #b57eff; }   /* tím */
+  100% { color: #ea0101; }   /* quay lại đỏ */
+}
+/* Căn giữa logo */
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+/* Logo có hiệu ứng phồng to - thu nhỏ */
+.logo-pulse {
+  width: 211px;
+  height: 100px;
+  animation: pulse 2.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Hiệu ứng nhịp tim */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+}
